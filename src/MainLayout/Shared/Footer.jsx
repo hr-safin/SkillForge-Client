@@ -9,7 +9,7 @@ export const Footer = () => {
             <h1 class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl">Subscribe our newsletter to get update.</h1>
             
             <div class="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
-                <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-black duration-300 bg-[#faa935] rounded-lg gap-x-3 font-medium focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+                <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-blue-600 rounded-lg gap-x-3 font-medium focus:ring focus:ring-gray-300 focus:ring-opacity-80">
                     <span>Sign Up Now</span>
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -66,7 +66,7 @@ export const Footer = () => {
         
         <div class="flex flex-col items-center justify-between sm:flex-row">
             
-            <h2 className=' text-2xl font-bold  lg:text-3xl  '>SkillForge</h2>
+            <h2 className=' text-2xl font-extrabold  lg:text-3xl  '>SkillForge</h2>
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 ">© Copyright 2024. All Rights Reserved By Travel Vista.</p>
         </div>
     </div>

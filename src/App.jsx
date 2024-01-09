@@ -4,6 +4,8 @@ import {
 } from "react-router-dom";
 import { AuthProvider } from "./AuthProvider/AuthProvider";
 import { MainLayout } from "./MainLayout/MainLayout.";
+import Login from "./Component/Login/Login";
+import SignUp from "./Component/SignUp/SignUp";
 
 function App() {
 
@@ -11,7 +13,17 @@ function App() {
     {
       path : "/",
       element :<MainLayout />,
-      errorElement : <Error />
+      errorElement : <Error />,
+      children : [
+        {
+          path : "/login",
+          element : <Login ></Login>
+        },
+        {
+          path : "/signUp",
+          element : <SignUp />
+        }
+      ]
     }
   ])
 
