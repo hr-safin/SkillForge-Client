@@ -1,0 +1,87 @@
+[
+    {
+      "courseName": "Introduction to JavaScript",
+      "coursePrice": 49.99,
+      "courseDescription": "Learn the basics of JavaScript programming language.",
+      "courseDuration": "4 weeks",
+      "courseMonth": "January"
+    },
+    {
+      "courseName": "React.js Fundamentals",
+      "coursePrice": 79.99,
+      "courseDescription": "Explore the fundamentals of building web applications with React.js.",
+      "courseDuration": "6 weeks",
+      "courseMonth": "February"
+    },
+    {
+      "courseName": "Node.js for Backend Development",
+      "coursePrice": 69.99,
+      "courseDescription": "Learn to build server-side applications using Node.js and Express.",
+      "courseDuration": "5 weeks",
+      "courseMonth": "March"
+    },
+    {
+      "courseName": "Python Programming Mastery",
+      "coursePrice": 59.99,
+      "courseDescription": "Master the Python programming language for versatile applications.",
+      "courseDuration": "8 weeks",
+      "courseMonth": "April"
+    },
+    {
+      "courseName": "Full Stack Web Development Bootcamp",
+      "coursePrice": 129.99,
+      "courseDescription": "Comprehensive training in front-end and back-end web development.",
+      "courseDuration": "10 weeks",
+      "courseMonth": "May"
+    },
+    {
+      "courseName": "Data Structures and Algorithms",
+      "coursePrice": 89.99,
+      "courseDescription": "Deep dive into fundamental data structures and algorithms.",
+      "courseDuration": "7 weeks",
+      "courseMonth": "June"
+    },
+    {
+      "courseName": "Mobile App Development with Flutter",
+      "coursePrice": 99.99,
+      "courseDescription": "Build cross-platform mobile apps with Flutter and Dart.",
+      "courseDuration": "6 weeks",
+      "courseMonth": "July"
+    },
+    {
+      "courseName": "Machine Learning with Python",
+      "coursePrice": 119.99,
+      "courseDescription": "Explore machine learning concepts and applications using Python.",
+      "courseDuration": "8 weeks",
+      "courseMonth": "August"
+    },
+    {
+      "courseName": "Advanced Frontend Frameworks",
+      "coursePrice": 89.99,
+      "courseDescription": "Master advanced features of popular frontend frameworks like Angular and Vue.",
+      "courseDuration": "7 weeks",
+      "courseMonth": "September"
+    },
+    {
+      "courseName": "Cybersecurity Essentials",
+      "coursePrice": 109.99,
+      "courseDescription": "Learn essential concepts and techniques in cybersecurity.",
+      "courseDuration": "9 weeks",
+      "courseMonth": "October"
+    },
+    {
+      "courseName": "Blockchain Development Basics",
+      "coursePrice": 79.99,
+      "courseDescription": "Introduction to blockchain technology and smart contract development.",
+      "courseDuration": "6 weeks",
+      "courseMonth": "November"
+    },
+    {
+      "courseName": "Cloud Computing with AWS",
+      "coursePrice": 129.99,
+      "courseDescription": "Explore cloud computing and AWS services for scalable applications.",
+      "courseDuration": "10 weeks",
+      "courseMonth": "December"
+    }
+  ]
+  
