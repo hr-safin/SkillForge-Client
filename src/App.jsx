@@ -10,14 +10,17 @@ function App() {
   const router = new createBrowserRouter([
     {
       path : "/",
-      element :<MainLayout />
+      element :<MainLayout />,
+      errorElement : <Error />
     }
   ])
 
 
   return (
     <>
-      <AuthProvider router={router}></AuthProvider>
+      <AuthProvider >
+        <RouterProvider router={router}></RouterProvider>
+      </AuthProvider>
     </>
   )
 }
