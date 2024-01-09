@@ -23,7 +23,7 @@ const NavBar = () => {
   return (
     <div className="z-50 bg-white fixed w-full  h-[73px] shadow md:px-6 lg:px-16 xl:px-32 px-4  flex justify-between items-center">
       <h2 className="  text-2xl sm:text-3xl font-bold text-gray-900  ">
-        <NavLink to="/">SkillForge</NavLink>
+        <NavLink className="flex items-center" to="/"> <span><img className="w-10" src="https://media.licdn.com/dms/image/D560BAQHulJrXtTG7qQ/company-logo_200_200/0/1664475779505/skillforge_logo?e=2147483647&v=beta&t=1jPZ1jy2cuXJ3sa6lUMLu1ZmJW3lIooBPwPUnfs1wqQ" alt="" /></span>SkillForge</NavLink>
       </h2>
 
       <ul className="hidden lg:flex tracking-wide text-gray-700 text-base  space-x-6 items-center ">

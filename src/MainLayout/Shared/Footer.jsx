@@ -66,7 +66,7 @@ export const Footer = () => {
         
         <div class="flex flex-col items-center justify-between sm:flex-row">
             
-            <h2 className=' text-2xl font-bold  lg:text-3xl  '>SkillForge</h2>
+            <h2 className=' text-2xl font-bold flex items-center  lg:text-3xl  '><span><img className="w-10" src="https://media.licdn.com/dms/image/D560BAQHulJrXtTG7qQ/company-logo_200_200/0/1664475779505/skillforge_logo?e=2147483647&v=beta&t=1jPZ1jy2cuXJ3sa6lUMLu1ZmJW3lIooBPwPUnfs1wqQ" alt="" /></span>SkillForge</h2>
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 ">© Copyright 2024. All Rights Reserved By Travel Vista.</p>
         </div>
     </div>
