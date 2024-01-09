@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <div className="z-50 bg-white fixed w-full  h-[73px] shadow md:px-6 lg:px-16 xl:px-32 px-4  flex justify-between items-center">
-      <h2 className="  text-2xl sm:text-3xl font-extrabold text-gray-900  ">
+      <h2 className="  text-2xl sm:text-3xl font-bold text-gray-900  ">
         <NavLink to="/">SkillForge</NavLink>
       </h2>
 
