@@ -1,11 +1,23 @@
-
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { AuthProvider } from "./AuthProvider/AuthProvider";
+import { MainLayout } from "./MainLayout/MainLayout.";
 
 function App() {
+
+  const router = new createBrowserRouter([
+    {
+      path : "/",
+      element :<MainLayout />
+    }
+  ])
 
 
   return (
     <>
-      <h2 className=" font-Poppins">Hello World</h2>
+      <AuthProvider router={router}></AuthProvider>
     </>
   )
 }
