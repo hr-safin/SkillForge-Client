@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export const Banner = () => {
   return (
     <div className=" md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-36 ">
@@ -8,22 +9,22 @@ export const Banner = () => {
           <h3 className=" text-3xl md:text-3xl lg:w-[550px] lg:text-4xl font-bold xl:text-5xl  text-gray-900">
             Never Stop Learning{" "}
           </h3>
-          <h3 className="text-3xl md:text-3xl lg:w-[580px] pt-2 pb-2 lg:text-4xl xl:text-5xl font-bold text-gray-900">
+          <h3 className="text-3xl md:text-3xl lg:w-[600px] pt-2 pb-2 lg:text-4xl xl:text-5xl font-bold text-gray-900">
             Life Never Stop Teaching
           </h3>
           <p className=" text-lg lg:w-[400px] xl:w-[500px] pb-3 text-gray-500">
             Every teaching and learning journey is unique Following We'll help
             guide your way.
           </p>
-          <button className="flex items-center gap-1 font-medium px-4 py-2.5 bg-blue-600 rounded-md text-white hover:bg-blue-700 hover:scale-105 duration-700 ease-in-out transition-all ">
+          <Link to="/signUp" className=" w-[160px] flex items-center gap-1 font-medium px-4 py-2.5 bg-blue-600 rounded-md text-white hover:bg-blue-700 hover:scale-105 duration-700 ease-in-out transition-all ">
             Register Now{" "}
             <span className="pt-1">
               <FaLongArrowAltRight />
             </span>
-          </button>
+          </Link>
         </div>
         <div className=" relative">
-          <div className="hidden md:flex md:flex-col absolute shadow-md bg-white px-5 py-2 rounded-md lg:-left-44 right-96 w-[200px]">
+          <div className="hidden md:flex md:flex-col absolute shadow-md bg-white px-5 py-2 rounded-md lg:-left-44 right-96 w-[220px]">
             <div>
              <p className=" font-bold">Our Happy Students</p>
               <p className=" font-bold text-blue-500">
