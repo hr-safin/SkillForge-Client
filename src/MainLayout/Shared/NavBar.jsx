@@ -28,13 +28,16 @@ const NavBar = () => {
 
       <ul className="hidden lg:flex tracking-wide text-gray-700 text-base  space-x-6 items-center ">
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink to="/">Home</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/">Home</NavLink>
         </li>
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink to="/about">About Us</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/about">About Us</NavLink>
         </li>
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink to="/tour">Tour</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "bg-blue-600 font-medium" : ""}`} to="/tour">Course</NavLink>
+        </li>
+        <li className="pt-1 cursor-pointer hover:text-blue-600">
+          <NavLink className={({isActive}) => `${isActive ? "bg-blue-600 font-medium" : ""}`} to="/tour">Contact Us</NavLink>
         </li>
 
         <li>
@@ -54,7 +57,7 @@ const NavBar = () => {
                   </summary>
                   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                     <li>
-                      <a>My Order</a>
+                      <a>My Cart</a>
                     </li>
                     <li>
                       <button onClick={handleLogOut}>Logout</button>
@@ -65,7 +68,7 @@ const NavBar = () => {
             ) : (
               <Link
                 to="/login"
-                class="relative cursor-pointer rounded-md border-2  border-blue-600 py-2 px-4 font-medium before:border-2 before:border-blue-600 text-gray-700 transition-colors before:absolute before:left-0  before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-blue-600 before:transition-transform before:duration-1000 before:content-[''] hover:text-white before:hover:scale-x-100"
+                class=" bg-blue-600 hover:bg-blue-700 duration-500 ease-in-out transition-all   rounded px-4 py-2  text-white"
               >
                 Login
               </Link>
@@ -102,7 +105,10 @@ const NavBar = () => {
                 About Us
               </li>
               <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
-                Tour
+                Course
+              </li>
+              <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+                Contact Us
               </li>
 
               <li>
