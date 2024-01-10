@@ -5,6 +5,7 @@ import Login from "./Component/Login/Login";
 import SignUp from "./Component/SignUp/SignUp";
 import { useEffect, useState } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import Home from "./Component/Home/Home";
 function App() {
   const [isLoading, setIsLoading] = useState("Loading");
 
@@ -20,6 +21,10 @@ function App() {
       element: <MainLayout />,
       errorElement: <Error />,
       children: [
+        {
+          path : "/",
+          element : <Home />
+        },
         {
           path: "/login",
           element: <Login></Login>,
