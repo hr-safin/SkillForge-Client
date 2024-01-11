@@ -5,6 +5,7 @@ import AboutUs from '../About/AboutUs';
 import Course from './Course/Course';
 import LiveClass from './Course/LiveClasses/LiveClass';
 import Choose from './Choose/Choose';
+import ContactUs from './ContactUs/ContactUs';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Course />
             <LiveClass />
             <Choose />
+            <ContactUs />
         </div>
     );
 };
