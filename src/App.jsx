@@ -14,7 +14,8 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
-import Course from "./Component/Home/Course/Course";
+
+import MainCourse from "./Component/Home/Course/MainCourse";
 
 
 const queryClient = new QueryClient()
@@ -40,7 +41,7 @@ function App() {
         },
         {
           path : "/course",
-          element : <Course />
+          element : <MainCourse />
         },
         {
           path: "/login",
