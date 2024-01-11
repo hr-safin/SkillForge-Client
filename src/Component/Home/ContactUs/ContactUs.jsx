@@ -110,7 +110,7 @@ const ContactUs = () => {
                   Come say hello at our office HQ.
                 </p>
                 <p class="mt-2 text-sm text-blue-500 ">
-                  100 Smith Street Collingwood VIC 3066 AU
+                  Gulshan 2 Road 135 House 17
                 </p>
               </div>
 
