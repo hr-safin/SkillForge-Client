@@ -38,13 +38,13 @@ const NavBar = () => {
           <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/">Home</NavLink>
         </li>
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/about">About Us</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/aboutUs">About Us</NavLink>
         </li>
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink className={({isActive}) => `${isActive ? "bg-blue-600 font-medium" : ""}`} to="/tour">Course</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/course">Course</NavLink>
         </li>
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink className={({isActive}) => `${isActive ? "bg-blue-600 font-medium" : ""}`} to="/tour">Contact Us</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "bg-blue-600 font-medium" : ""}`} to="/contact">Contact Us</NavLink>
         </li>
 
         <li>
