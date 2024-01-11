@@ -1,87 +1,98 @@
 [
-    {
+  {
       "courseName": "Introduction to JavaScript",
       "coursePrice": 49.99,
       "courseDescription": "Learn the basics of JavaScript programming language.",
       "courseDuration": "4 weeks",
-      "courseMonth": "January"
-    },
-    {
+      "courseMonth": "January",
+      "courseImage": "https://user-images.githubusercontent.com/68542775/167072911-dc31eac8-6885-4a05-9c25-279ecce22a79.png"
+  },
+  {
       "courseName": "React.js Fundamentals",
       "coursePrice": 79.99,
       "courseDescription": "Explore the fundamentals of building web applications with React.js.",
       "courseDuration": "6 weeks",
-      "courseMonth": "February"
-    },
-    {
+      "courseMonth": "February",
+      "courseImage": "https://trisectinstitute.com/wp-content/uploads/2021/12/best-react-js-training-institute-1.png"
+  },
+  {
       "courseName": "Node.js for Backend Development",
       "coursePrice": 69.99,
       "courseDescription": "Learn to build server-side applications using Node.js and Express.",
       "courseDuration": "5 weeks",
-      "courseMonth": "March"
-    },
-    {
+      "courseMonth": "March",
+      "courseImage": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220517005132/Why-to-Use-NodeJS-for-Backend-Development.jpg"
+  },
+  {
       "courseName": "Python Programming Mastery",
       "coursePrice": 59.99,
       "courseDescription": "Master the Python programming language for versatile applications.",
       "courseDuration": "8 weeks",
-      "courseMonth": "April"
-    },
-    {
+      "courseMonth": "April",
+      "courseImage": "https://miro.medium.com/v2/resize:fit:774/1*DGjN7bDrc2jd6fokQbY9lg.png"
+  },
+  {
       "courseName": "Full Stack Web Development Bootcamp",
       "coursePrice": 129.99,
       "courseDescription": "Comprehensive training in front-end and back-end web development.",
       "courseDuration": "10 weeks",
-      "courseMonth": "May"
-    },
-    {
+      "courseMonth": "May",
+      "courseImage": "https://www.codingninjas.com/blog/wp-content/uploads/2021/08/Blog-2-2.png"
+  },
+  {
       "courseName": "Data Structures and Algorithms",
       "coursePrice": 89.99,
       "courseDescription": "Deep dive into fundamental data structures and algorithms.",
       "courseDuration": "7 weeks",
-      "courseMonth": "June"
-    },
-    {
+      "courseMonth": "June",
+      "courseImage": "https://dpi.df.daffodil.family/web/image/slide.channel/176/image_1920/Data%20Structure%20%26%20Algorithm%20%2828542%29?unique=f8b2c6f"
+  },
+  {
       "courseName": "Mobile App Development with Flutter",
       "coursePrice": 99.99,
       "courseDescription": "Build cross-platform mobile apps with Flutter and Dart.",
       "courseDuration": "6 weeks",
-      "courseMonth": "July"
-    },
-    {
+      "courseMonth": "July",
+      "courseImage": "https://dce0qyjkutl4h.cloudfront.net/wp-content/uploads/2020/09/Flutter-App-development.jpg"
+  },
+  {
       "courseName": "Machine Learning with Python",
       "coursePrice": 119.99,
       "courseDescription": "Explore machine learning concepts and applications using Python.",
       "courseDuration": "8 weeks",
-      "courseMonth": "August"
-    },
-    {
+      "courseMonth": "August",
+      "courseImage": "https://media.licdn.com/dms/image/D5612AQF98axVlLMdbA/article-cover_image-shrink_600_2000/0/1688490371833?e=2147483647&v=beta&t=hFVGHR9i7BiyjcK7DjMzHZ9uKzW2sG-QI3MgBpW27zw"
+  },
+  {
       "courseName": "Advanced Frontend Frameworks",
       "coursePrice": 89.99,
       "courseDescription": "Master advanced features of popular frontend frameworks like Angular and Vue.",
       "courseDuration": "7 weeks",
-      "courseMonth": "September"
-    },
-    {
+      "courseMonth": "September",
+      "courseImage": "https://www.gurutechnolabs.com/wp-content/uploads/2020/03/Top-Front-End-Frameworks.jpg"
+  },
+  {
       "courseName": "Cybersecurity Essentials",
       "coursePrice": 109.99,
       "courseDescription": "Learn essential concepts and techniques in cybersecurity.",
       "courseDuration": "9 weeks",
-      "courseMonth": "October"
-    },
-    {
+      "courseMonth": "October",
+      "courseImage": "https://www.commercialintegrator.com/wp-content/uploads/2021/11/cybersecurity-image-1000x500-1.jpg"
+  },
+  {
       "courseName": "Blockchain Development Basics",
       "coursePrice": 79.99,
       "courseDescription": "Introduction to blockchain technology and smart contract development.",
       "courseDuration": "6 weeks",
-      "courseMonth": "November"
-    },
-    {
+      "courseMonth": "November",
+      "courseImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--NedIQyYr--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e25z9igl6z5w8n44b5gp.png"
+  },
+  {
       "courseName": "Cloud Computing with AWS",
       "coursePrice": 129.99,
       "courseDescription": "Explore cloud computing and AWS services for scalable applications.",
       "courseDuration": "10 weeks",
-      "courseMonth": "December"
-    }
-  ]
-  
+      "courseMonth": "December",
+      "courseImage": "https://dfxbrma6dkuks.cloudfront.net/images/99999998308249390000_6c916990-ba62-44a0-81a3-90e04fe26337.jpeg"
+  }
+]
