@@ -92,11 +92,11 @@ const NavBar = () => {
           )}
 
           <div
-            className={`top-0 text-gray-800 bg-orange-50 right-0 absolute   w-[70vw] h-full  ${
+            className={`top-0 text-gray-800 bg-gray-50 right-0 absolute   w-[70vw] h-full  ${
               isOpen ? "translate-x-0" : "translate-x-full"
             } ease-in-out duration-500`}
           >
-            <ul className="md:h-[100vh] bg-orange-50 h-[100vh] p-10 py-32 flex flex-col gap-6 justify-center items-center">
+            <ul className="md:h-[100vh] bg-gray-50 h-[100vh] p-10 py-32 flex flex-col gap-6 justify-center items-center">
               {user && <p className=" font-bold text-lg">{user.displayName}</p>}
               <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
                 Home
@@ -113,7 +113,7 @@ const NavBar = () => {
 
               <li>
                 {user ? (
-                  <button className=" border py-2 px-4 rounded border-blue-600" onClick={handleLogOut}>Logout</button>
+                  <button className=" border-2 mt-3 py-2 px-4 rounded border-blue-600" onClick={handleLogOut}>Logout</button>
                 ) : (
                   <div className="  text-xl text-gray-800">
                     <Link to="/login">Login</Link>
