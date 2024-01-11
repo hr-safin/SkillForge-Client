@@ -16,7 +16,7 @@ export const Banner = () => {
             Every teaching and learning journey is unique Following We'll help
             guide your way.
           </p>
-          <Link to="/signUp" className=" w-[160px] flex items-center gap-1 font-medium px-4 py-2.5 bg-blue-600 rounded-md text-white hover:bg-blue-700 hover:scale-105 duration-700 ease-in-out transition-all ">
+          <Link to="/signUp" className=" w-[157px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-600  text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all ">
             Register Now{" "}
             <span className="pt-1">
               <FaLongArrowAltRight />
