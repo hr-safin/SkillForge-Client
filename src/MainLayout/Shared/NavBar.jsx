@@ -3,6 +3,7 @@ import { FaStream } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [isOpen, setOpen] = useState(false);
@@ -14,8 +15,11 @@ const NavBar = () => {
   };
 
   const handleLogOut = () => {
+
+    const toastId = toast.loading("Logout Successful")
     logOut().then((result) => {
       console.log(result.user);
+      toast.success("Logout Successful", {id : toastId})
       navigate("/");
     });
   };

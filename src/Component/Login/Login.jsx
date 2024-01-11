@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
 
@@ -14,19 +15,31 @@ const Login = () => {
         const password = form.value.password
         
         setError("")
+        const toastId = toast.loading("Login Successful")
         signIn(email, password)
         .then(result => {
             console.log(result.user)
-            navigate("/")
+            toast.success("Login Successful", {id : toastId})
+            setTimeout(() => {
+              navigate("/")
+            }, 1500)
+            
+            
         })
         .catch(error => console.log(error.message))
     }
 
     const handleGoogleLogin = () => {
-
+       
+       const toastId = toast.loading("Login Successful")
         googleLogin()
         .then((result) => {
             console.log(result.user)
+            toast.success("Login Successful", {id : toastId})
+            setTimeout(() => {
+              navigate("/")
+            }, 1500)
+            
         })
         .catch(error => console.log(error))
     }

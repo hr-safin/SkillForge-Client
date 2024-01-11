@@ -6,6 +6,7 @@ import SignUp from "./Component/SignUp/SignUp";
 import { useEffect, useState } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import Home from "./Component/Home/Home";
+import toast, { Toaster } from 'react-hot-toast';
 function App() {
   const [isLoading, setIsLoading] = useState("Loading");
 
@@ -46,6 +47,7 @@ function App() {
       <AuthProvider>
         <RouterProvider router={router}></RouterProvider>
       </AuthProvider>
+      <Toaster />
     </>
   );
 }

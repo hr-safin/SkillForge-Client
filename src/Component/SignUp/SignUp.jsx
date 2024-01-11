@@ -4,6 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { getAuth, updateProfile } from "firebase/auth";
 import { app } from "../../firebase/firebase.config";
+import toast from "react-hot-toast";
 
 
 const SignUp = () => {
@@ -14,6 +15,8 @@ const SignUp = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
+    const tostId = toast.loading("Account Created Successfully")
     createUser(data.email, data.password)
     .then(result => {
         console.log(result.user)
@@ -21,6 +24,8 @@ const SignUp = () => {
           displayName: data.name
         })
         .then(result =>{
+
+          toast.success("Account Created Successfully", {id : tostId})
           navigate("/")
         })
     })
