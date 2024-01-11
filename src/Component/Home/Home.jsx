@@ -4,6 +4,7 @@ import Offer from './OfferPart/Offer';
 import AboutUs from '../About/AboutUs';
 import Course from './Course/Course';
 import LiveClass from './Course/LiveClasses/LiveClass';
+import Choose from './Choose/Choose';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <AboutUs />
             <Course />
             <LiveClass />
+            <Choose />
         </div>
     );
 };

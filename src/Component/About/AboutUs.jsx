@@ -15,15 +15,15 @@ const AboutUs = () => {
           <h3 className="text-2xl md:text-3xl lg:w-[600px] pt-2 pb-2 lg:text-4xl xl:text-4xl font-bold text-gray-900">
             Now In One Place
           </h3>
-          <p className=" text-sm sm:text-base lg:w-[520px] pt-2 text-gray-600">
+          <p className=" text-sm sm:text-base lg:w-[520px] pt-2 text-gray-500">
             At SkillForge, we're dedicated to fostering a culture of learning
             and growth. Our platform offers a diverse range of educational
             resources, expert-led courses, and a supportive community. Join us
             on your journey to success.
           </p>
-          <p className=" pt-6 flex items-center text-lg font-bold gap-3 pb-5"><span className=" text-xl py-1.5 px-1.5 shadow-md  rounded-full bg-blue-500 text-white"><FaAngleRight /></span> The Most World Class Instructors</p>
-          <p className=" flex items-center text-lg font-bold gap-3 pb-5"><span className=" text-xl py-1.5 px-1.5  rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Access Your Class anywhere</p>
-          <p className=" flex items-center text-lg font-bold gap-3 pb-3"><span className=" text-xl py-1.5 px-1.5 rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Flexible Course Plan</p>
+          <p className=" pt-6 flex items-center text-lg font-bold gap-3 pb-5"><span className=" text-xl py-1 px-1 shadow-md  rounded-full bg-blue-500 text-white"><FaAngleRight /></span> The Most World Class Instructors</p>
+          <p className=" flex items-center text-lg font-bold gap-3 pb-5"><span className=" text-xl py-1 px-1  rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Access Your Class anywhere</p>
+          <p className=" flex items-center text-lg font-bold gap-3 pb-3"><span className=" text-xl py-1 px-1 rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Flexible Course Plan</p>
           <Link to="/signUp" className=" mt-8 w-[166px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-500  text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all ">
             Start Free Trial{" "}
             <span className="pt-1">
