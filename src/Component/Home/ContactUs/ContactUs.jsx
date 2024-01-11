@@ -110,7 +110,7 @@ const ContactUs = () => {
                   Come say hello at our office HQ.
                 </p>
                 <p class="mt-2 text-sm text-blue-500 ">
-                  Gulshan 2 Road 135 House 17
+                   Road 135 House 17 Gulshan 2, Bangladesh
                 </p>
               </div>
 
