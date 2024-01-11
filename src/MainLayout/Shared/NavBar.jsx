@@ -17,10 +17,13 @@ const NavBar = () => {
   const handleLogOut = () => {
 
     const toastId = toast.loading("Logout Successful")
-    logOut().then((result) => {
-      console.log(result.user);
+    logOut()
+    .then((result) => {
       toast.success("Logout Successful", {id : toastId})
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 1500)
+     
     });
   };
 
