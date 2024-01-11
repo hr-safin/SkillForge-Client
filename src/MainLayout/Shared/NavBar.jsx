@@ -44,7 +44,7 @@ const NavBar = () => {
           <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/course">Course</NavLink>
         </li>
         <li className="pt-1 cursor-pointer hover:text-blue-600">
-          <NavLink className={({isActive}) => `${isActive ? "bg-blue-600 font-medium" : ""}`} to="/contact">Contact Us</NavLink>
+          <NavLink className={({isActive}) => `${isActive ? "text-blue-600 font-medium" : ""}`} to="/contact">Contact Us</NavLink>
         </li>
 
         <li>

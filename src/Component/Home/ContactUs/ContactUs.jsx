@@ -15,8 +15,8 @@ const ContactUs = () => {
             </h1>
           </div>
 
-          <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
-            <div class="grid grid-cols-2 gap-12 md:grid-cols-2">
+          <div class="grid grid-cols-1 gap-20 mt-10 lg:grid-cols-2">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-2">
               <div>
                 <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 ">
                   <svg
@@ -42,7 +42,7 @@ const ContactUs = () => {
                   Our friendly team is here to help.
                 </p>
                 <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
-                  hello@merakiui.com
+                  hello@example.com
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ const ContactUs = () => {
                   Mon-Fri from 8am to 5pm.
                 </p>
                 <p class="mt-2 text-sm text-blue-500 ">
-                  +1 (555) 000-0000
+                  +88 04543534534
                 </p>
               </div>
             </div>
