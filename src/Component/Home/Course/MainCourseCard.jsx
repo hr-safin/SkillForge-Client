@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdArrowRightAlt } from "react-icons/md";
 const MainCourseCard = ({item}) => {
+    window.scrollTo(0,0)
     return (
         <div className="card cursor-pointer  border  p-4  bg-base-100 hover:shadow-xl duration-700 ease-in-out transition-all">
       
