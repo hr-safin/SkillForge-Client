@@ -3,13 +3,14 @@ import React from "react";
 const ContactUs = () => {
   return (
     <div
-      data-aos="fade-up"
-      data-aos-duration="1500"
       className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 py-72 "
     >
       <section class="bg-white">
         <div class="container  py-12 mx-auto">
-          <div>
+          <div
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          >
             <h2 className=" mb-5 rounded-full w-[135px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-lg ">
               Contact Us
             </h2>
@@ -19,7 +20,10 @@ const ContactUs = () => {
             </h1>
           </div>
 
-          <div class="grid grid-cols-1 gap-20 mt-10 lg:grid-cols-2">
+          <div 
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          class="grid grid-cols-1 gap-20 mt-10 lg:grid-cols-2">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-2">
               <div>
                 <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 ">

@@ -3,7 +3,10 @@ import { MdArrowRightAlt } from "react-icons/md";
 const MainCourseCard = ({item}) => {
     window.scrollTo(0,0)
     return (
-        <div className="card cursor-pointer  border  p-4  bg-base-100 hover:shadow-xl duration-700 ease-in-out transition-all">
+        <div
+        data-aos="fade-up"
+          data-aos-duration="2000"
+        className="card cursor-pointer  border  p-4  bg-base-100 hover:shadow-xl duration-700 ease-in-out transition-all">
       
         <img
           className="rounded-lg h-[195px] w-full"
