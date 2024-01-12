@@ -71,8 +71,6 @@ export const Footer = () => {
         <hr class="my-6 border-gray-200 md:my-10"/>
         
         <div
-        data-aos="fade-up"
-        data-aos-duration="2000"
         class="flex flex-col items-center justify-between sm:flex-row">
             
             <h2 className=' text-2xl font-bold flex items-center  lg:text-3xl  '><span className='pb-2'><img className="w-10" src="https://lirp.cdn-website.com/65cebca4/dms3rep/multi/opt/2-640w.png" alt="" /></span>SkillForge</h2>

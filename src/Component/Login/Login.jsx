@@ -4,7 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-
+   window.scrollTo(0,0)
     const {user, signIn,googleLogin} = useContext(AuthContext)
    const [error,setError] = useState("")
    const navigate = useNavigate()

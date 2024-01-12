@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 
 
 const SignUp = () => {
+  window.scrollTo(0,0)
   const { user, createUser } = useContext(AuthContext);
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
   const navigate = useNavigate()
