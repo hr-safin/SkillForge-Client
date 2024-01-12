@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { getAuth, updateProfile } from "firebase/auth";
@@ -12,6 +12,7 @@ const SignUp = () => {
   const { user, createUser } = useContext(AuthContext);
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
   const navigate = useNavigate()
+  const location = useLocation()
   const auth = getAuth(app)
 
   const onSubmit = (data) => {
@@ -27,7 +28,8 @@ const SignUp = () => {
         .then(result =>{
 
           toast.success("Account Created Successfully", {id : tostId})
-          navigate("/")
+          navigate(location.state ? location.state : "/")
+          
         })
     })
     .catch(error => {

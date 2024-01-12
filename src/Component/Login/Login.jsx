@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -8,6 +8,7 @@ const Login = () => {
     const {user, signIn,googleLogin} = useContext(AuthContext)
    const [error,setError] = useState("")
    const navigate = useNavigate()
+   const location = useLocation()
     const handleLogin = (e) => {
         e.preventDefault()
         const form = e.target
@@ -21,7 +22,7 @@ const Login = () => {
             console.log(result.user)
             toast.success("Login Successful", {id : toastId})
             setTimeout(() => {
-              navigate("/")
+              navigate(location.state ? location.state : "/")
             }, 1500)
             
             
@@ -37,7 +38,7 @@ const Login = () => {
             console.log(result.user)
             toast.success("Login Successful", {id : toastId})
             setTimeout(() => {
-              navigate("/")
+              navigate(location.state ? location.state : "/")
             }, 1500)
             
         })
