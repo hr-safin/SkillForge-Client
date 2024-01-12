@@ -55,12 +55,13 @@
       "Roadmap" : "Embark on a 7-week journey into the heart of computing with our comprehensive Data Structures and Algorithms course in June, priced at $89.99. Dive into fundamental topics such as arrays, linked lists, stacks, queues, trees, and graphs. Explore algorithmic techniques, including searching, sorting, and dynamic programming. Participants will learn to analyze the time and space complexity of algorithms, honing problem-solving skills. The course delves into advanced topics like hash tables and introduces key algorithmic paradigms. Through coding exercises and projects, learners will gain a deep understanding of efficient data organization and algorithmic design, essential for success in software development and technical interviews. Join us for a transformative learning experience, where you'll master the building blocks of computer science."
   },
   {
-      "courseName": "Mobile App Development with Flutter",
+      "courseName": "App Development with Flutter",
       "coursePrice": 99.99,
       "courseDescription": "Build cross-platform mobile apps with Flutter and Dart.",
       "courseDuration": "6 weeks",
       "courseMonth": "July",
-      "courseImage": "https://dce0qyjkutl4h.cloudfront.net/wp-content/uploads/2020/09/Flutter-App-development.jpg"
+      "courseImage": "https://dce0qyjkutl4h.cloudfront.net/wp-content/uploads/2020/09/Flutter-App-development.jpg",
+      "Roadmap" : "Embark on a 6-week journey into Mobile App Development with Flutter in July at $99.99. This course is designed to equip participants with the skills to build cross-platform mobile applications using Flutter and Dart. Topics covered include Flutter widget tree, state management, navigation, responsive design, and integration with APIs. Participants will engage in hands-on projects to create functional mobile apps, gaining proficiency in UI/UX design and app deployment. The course also explores Flutter's capabilities for building beautiful and performant native interfaces. Join us for an immersive learning experience, where you'll harness the power of Flutter to develop versatile and visually appealing mobile applications for both Android and iOS platforms."
   },
   {
       "courseName": "Machine Learning with Python",
@@ -68,7 +69,8 @@
       "courseDescription": "Explore machine learning concepts and applications using Python.",
       "courseDuration": "8 weeks",
       "courseMonth": "August",
-      "courseImage": "https://media.licdn.com/dms/image/D5612AQF98axVlLMdbA/article-cover_image-shrink_600_2000/0/1688490371833?e=2147483647&v=beta&t=hFVGHR9i7BiyjcK7DjMzHZ9uKzW2sG-QI3MgBpW27zw"
+      "courseImage": "https://media.licdn.com/dms/image/D5612AQF98axVlLMdbA/article-cover_image-shrink_600_2000/0/1688490371833?e=2147483647&v=beta&t=hFVGHR9i7BiyjcK7DjMzHZ9uKzW2sG-QI3MgBpW27zw",
+      "Roadmap" : "Embark on an 8-week journey into the dynamic realm of Machine Learning with Python starting in August at $119.99. This comprehensive course delves into fundamental machine learning concepts, including supervised and unsupervised learning, classification, regression, and clustering. Participants will explore popular machine learning libraries like scikit-learn and TensorFlow, mastering techniques for model training, evaluation, and optimization. The course also covers real-world applications, enabling learners to tackle diverse machine learning challenges. Engage in hands-on projects that apply machine learning algorithms to practical scenarios, fostering a deep understanding of the field. Join us for an enriching and practical learning experience, where you'll gain the skills to leverage Python for machine learning applications and decision-making."
   },
   {
       "courseName": "Advanced Frontend Frameworks",
@@ -76,7 +78,8 @@
       "courseDescription": "Master advanced features of popular frontend frameworks like Angular and Vue.",
       "courseDuration": "7 weeks",
       "courseMonth": "September",
-      "courseImage": "https://www.gurutechnolabs.com/wp-content/uploads/2020/03/Top-Front-End-Frameworks.jpg"
+      "courseImage": "https://www.gurutechnolabs.com/wp-content/uploads/2020/03/Top-Front-End-Frameworks.jpg",
+      "Roadmap" : "Embark on a 7-week exploration of Advanced Frontend Frameworks starting in September at $89.99. This course is tailored for seasoned developers aiming to master advanced features of popular frontend frameworks such as Angular and Vue. Topics covered include state management, routing, component lifecycle, and advanced UI techniques. Participants will delve into optimizing performance and integrating with backend services. Through challenging projects and real-world applications, learners will solidify their expertise in building responsive and efficient user interfaces. Join us for an immersive learning experience, where you'll elevate your frontend development skills, creating sophisticated and seamless user experiences with cutting-edge frontend frameworks."
   },
   {
       "courseName": "Cybersecurity Essentials",
@@ -84,7 +87,8 @@
       "courseDescription": "Learn essential concepts and techniques in cybersecurity.",
       "courseDuration": "9 weeks",
       "courseMonth": "October",
-      "courseImage": "https://www.commercialintegrator.com/wp-content/uploads/2021/11/cybersecurity-image-1000x500-1.jpg"
+      "courseImage": "https://www.commercialintegrator.com/wp-content/uploads/2021/11/cybersecurity-image-1000x500-1.jpg",
+      "Roadmap" : "Embark on a 9-week exploration of Cybersecurity Essentials beginning in October at $109.99. This course provides a comprehensive understanding of essential concepts and techniques in cybersecurity. Topics covered include network security, encryption, authentication, threat detection, incident response, and ethical hacking. Participants will gain hands-on experience in securing systems and networks through practical exercises and simulations. The course emphasizes industry best practices and current cybersecurity trends, preparing learners for the challenges of a rapidly evolving digital landscape. Join us for an immersive learning experience, where you'll develop the skills and knowledge required to safeguard digital assets and contribute to the ever-growing field of cybersecurity."
   },
   {
       "courseName": "Blockchain Development Basics",
@@ -92,7 +96,8 @@
       "courseDescription": "Introduction to blockchain technology and smart contract development.",
       "courseDuration": "6 weeks",
       "courseMonth": "November",
-      "courseImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--NedIQyYr--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e25z9igl6z5w8n44b5gp.png"
+      "courseImage": "https://res.cloudinary.com/practicaldev/image/fetch/s--NedIQyYr--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e25z9igl6z5w8n44b5gp.png",
+      "Roadmap" : "Embark on a 6-week journey into Blockchain Development Basics starting in November at $79.99. This course offers an introduction to blockchain technology and smart contract development. Topics covered include decentralized ledgers, consensus algorithms, cryptocurrency fundamentals, and building smart contracts with languages like Solidity. Participants will engage in hands-on projects to create simple decentralized applications (DApps) and understand the principles behind blockchain security. The course aims to demystify blockchain, making it accessible for developers seeking to explore this transformative technology. Join us for an insightful learning experience, where you'll acquire the foundational knowledge to embark on your journey into the world of blockchain development."
   },
   {
       "courseName": "Cloud Computing with AWS",
@@ -100,6 +105,7 @@
       "courseDescription": "Explore cloud computing and AWS services for scalable applications.",
       "courseDuration": "10 weeks",
       "courseMonth": "December",
-      "courseImage": "https://dfxbrma6dkuks.cloudfront.net/images/99999998308249390000_6c916990-ba62-44a0-81a3-90e04fe26337.jpeg"
+      "courseImage": "https://dfxbrma6dkuks.cloudfront.net/images/99999998308249390000_6c916990-ba62-44a0-81a3-90e04fe26337.jpeg",
+      "Roadmap" : "Embark on a 10-week exploration of "Cloud Computing with AWS" commencing in December at $129.99. This comprehensive course introduces participants to cloud computing concepts and the services offered by Amazon Web Services (AWS). Topics covered include virtualization, storage, networking, security, and scalability in the AWS cloud environment. Participants will gain hands-on experience through practical exercises and projects, learning to deploy and manage scalable applications. The course emphasizes best practices for cost optimization and performance tuning in AWS. Join us for an immersive learning experience, where you'll acquire the skills to leverage AWS for building and deploying robust and scalable cloud-based solutions."
   }
 ]
