@@ -1,5 +1,6 @@
 import React from "react";
 import { MdArrowRightAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
 const CourseCard = ({ item }) => {
   return (
     <div
@@ -19,12 +20,12 @@ const CourseCard = ({ item }) => {
         </h2>
         <p className=" text-gray-500 text-sm">{item.courseDescription}</p>
         <div className="flex justify-between items-center pt-8">
-          <button className=" flex items-center gap-1 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
+          <Link to={`/enroll/${item._id}`} className=" flex items-center gap-1 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
             Enroll Now{" "}
             <span className=" text-xl">
               <MdArrowRightAlt />
             </span>
-          </button>
+          </Link>
           <h3 className=" text-xl font-extrabold text-blue-500">
             $ {item.coursePrice}
           </h3>
