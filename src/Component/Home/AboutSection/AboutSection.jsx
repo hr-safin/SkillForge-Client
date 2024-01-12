@@ -7,7 +7,7 @@ import AboutUs from '../../About/AboutUs';
 const AboutSection = () => {
     window.scrollTo(0,0)
     return (
-        <div className=' pt-20 min-h-screen'>
+        <div className=' pt-16 min-h-screen'>
             <AboutUs />
             <LiveClass />
             <Choose />

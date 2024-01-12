@@ -41,7 +41,7 @@ const AboutUs = () => {
           <p data-aos="fade-up"
           data-aos-duration="2000" className=" flex items-center text-lg font-bold gap-3 pb-3"><span className=" text-xl py-1 px-1 rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Flexible Course Plan</p>
           <Link data-aos="fade-up"
-          data-aos-duration="2000" to="/signUp" className=" mt-8 w-[166px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-500  text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all ">
+          data-aos-duration="2000" to="/signUp" className=" mt-6 w-[166px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-500  text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all ">
             Start Free Trial{" "}
             <span className="pt-1">
               <FaLongArrowAltRight />
