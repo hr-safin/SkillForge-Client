@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 const Enroll = () => {
 
     const {id} = useParams()
+    console.log(id)
     return (
         <div>
             
