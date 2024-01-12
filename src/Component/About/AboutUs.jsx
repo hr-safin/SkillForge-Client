@@ -3,7 +3,10 @@ import { FaAngleRight,FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const AboutUs = () => {
   return (
-    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-20 ">
+    <div
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-20 ">
       <div className=" flex flex-col lg:flex-row-reverse lg:justify-center items-center h-screen lg:gap-16 gap-20">
         <div className="flex-1 lg:w-[30%] mx-auto">
           <h2 className=" mb-5 rounded-full w-[200px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-lg ">

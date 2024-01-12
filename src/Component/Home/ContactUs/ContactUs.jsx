@@ -2,13 +2,17 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 py-72 ">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 py-72 "
+    >
       <section class="bg-white">
         <div class="container  py-12 mx-auto">
           <div>
-          <h2 className=" mb-5 rounded-full w-[135px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-lg ">
-            Contact Us
-          </h2>
+            <h2 className=" mb-5 rounded-full w-[135px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-lg ">
+              Contact Us
+            </h2>
 
             <h1 class="mt-2 text-2xl font-bold text-gray-800 md:text-3xl ">
               Get In Touch
@@ -35,9 +39,7 @@ const ContactUs = () => {
                   </svg>
                 </span>
 
-                <h2 class="mt-4 text-base font-medium text-gray-800 ">
-                  Email
-                </h2>
+                <h2 class="mt-4 text-base font-medium text-gray-800 ">Email</h2>
                 <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   Our friendly team is here to help.
                 </p>
@@ -75,9 +77,7 @@ const ContactUs = () => {
                 <p class="mt-2 text-sm text-gray-500 ">
                   Our friendly team is here to help.
                 </p>
-                <p class="mt-2 text-sm text-blue-500 ">
-                  Start new chat
-                </p>
+                <p class="mt-2 text-sm text-blue-500 ">Start new chat</p>
               </div>
 
               <div>
@@ -110,7 +110,7 @@ const ContactUs = () => {
                   Come say hello at our office HQ.
                 </p>
                 <p class="mt-2 text-sm text-blue-500 ">
-                   Road 135 House 17 Gulshan 2, Bangladesh
+                  Road 135 House 17 Gulshan 2, Bangladesh
                 </p>
               </div>
 
@@ -132,15 +132,11 @@ const ContactUs = () => {
                   </svg>
                 </span>
 
-                <h2 class="mt-4 text-base font-medium text-gray-800 ">
-                  Phone
-                </h2>
+                <h2 class="mt-4 text-base font-medium text-gray-800 ">Phone</h2>
                 <p class="mt-2 text-sm text-gray-500 ">
                   Mon-Fri from 8am to 5pm.
                 </p>
-                <p class="mt-2 text-sm text-blue-500 ">
-                  +88 04543534534
-                </p>
+                <p class="mt-2 text-sm text-blue-500 ">+88 04543534534</p>
               </div>
             </div>
 
@@ -157,14 +153,10 @@ const ContactUs = () => {
                       class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg  focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
-
-                 
                 </div>
 
                 <div class="mt-4">
-                  <label class="block mb-2 text-sm text-gray-600 ">
-                    Email 
-                  </label>
+                  <label class="block mb-2 text-sm text-gray-600 ">Email</label>
                   <input
                     type="email"
                     placeholder="johndoe@example.com"
