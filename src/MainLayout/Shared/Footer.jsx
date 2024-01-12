@@ -5,7 +5,10 @@ export const Footer = () => {
     <div>
         <footer class="bg-white lg:px-32 px-4 pt-72 lg:pt-40">
     <div class="container  py-12 mx-auto">
-        <div class="md:flex md:-mx-3 md:items-center md:justify-between">
+        <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class="md:flex md:-mx-3 md:items-center md:justify-between">
             <h1 class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl">Subscribe our newsletter to get update.</h1>
             
             <div class="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
@@ -21,7 +24,10 @@ export const Footer = () => {
         
         <hr class="my-6 border-gray-200 md:my-10 "/>
 
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div  
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <div>
                 <p class="font-semibold text-gray-800 ">Quick Link</p>
 
@@ -64,7 +70,10 @@ export const Footer = () => {
         
         <hr class="my-6 border-gray-200 md:my-10"/>
         
-        <div class="flex flex-col items-center justify-between sm:flex-row">
+        <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class="flex flex-col items-center justify-between sm:flex-row">
             
             <h2 className=' text-2xl font-bold flex items-center  lg:text-3xl  '><span className='pb-2'><img className="w-10" src="https://lirp.cdn-website.com/65cebca4/dms3rep/multi/opt/2-640w.png" alt="" /></span>SkillForge</h2>
             <p class="mt-4 text-sm text-gray-500 sm:mt-0 ">© Copyright 2024. All Rights Reserved By Travel Vista.</p>

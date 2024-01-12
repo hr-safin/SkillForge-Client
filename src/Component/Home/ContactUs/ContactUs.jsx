@@ -1,6 +1,7 @@
 import React from "react";
 
 const ContactUs = () => {
+  window.scrollTo(0,0)
   return (
     <div
       className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 py-72 "
