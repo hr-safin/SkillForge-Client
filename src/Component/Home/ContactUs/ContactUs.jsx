@@ -4,7 +4,7 @@ const ContactUs = () => {
   window.scrollTo(0,0)
   return (
     <div
-      className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 py-72 "
+      className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 py-24 "
     >
       <section class="bg-white">
         <div class="container  py-12 mx-auto">

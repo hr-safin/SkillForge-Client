@@ -105,17 +105,18 @@ const NavBar = () => {
           >
             <ul className="md:h-[100vh] bg-gray-50 h-[100vh] p-10 py-32 flex flex-col gap-6 justify-center items-center">
               {user && <p className=" font-bold text-lg">{user.displayName}</p>}
-              <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
-                Home
+              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+                <Link to="/">Home</Link>
               </li>
-              <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
-                About Us
+              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+                
+                <Link to="/aboutUs">About Us</Link>
               </li>
-              <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
-                Course
+              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+                <Link to="/course">Course</Link>
               </li>
-              <li className="pt-2 text-xl cursor-pointer hover:text-blue-600">
-                Contact Us
+              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+                <Link to="contact">Contact Us</Link>
               </li>
 
               <li>
