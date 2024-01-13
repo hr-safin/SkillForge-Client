@@ -27,7 +27,7 @@ const Enroll = () => {
        navigate(`/payment/${enroll._id}`) 
       let timerInterval;
       Swal.fire({
-        title: "Preparing Your Enrollment... Redirecting to Payment Gateway!",
+        title: "Preparing Your Enrollment! Redirecting to Payment Page!",
         timer: 2000,
         timerProgressBar: false,
         didOpen: () => {
