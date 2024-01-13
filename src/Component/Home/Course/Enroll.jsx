@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../../Hook/useAxiosPublic";
 import { MdArrowRightAlt } from "react-icons/md";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 const Enroll = () => {
   window.scrollTo(0, 0);
   const { id } = useParams();
+  const {isLoading} = useContext(AuthContext)
   const axiosPublic = useAxiosPublic();
   const [enroll, setEnroll] = useState([]);
 
@@ -15,7 +18,9 @@ const Enroll = () => {
       setEnroll(res.data);
     });
   }, []);
-  return (
+  return isLoading ? <div className="flex text-3xl justify-center items-center h-screen">
+  <ScaleLoader color="#2563eb" />
+</div> : (
     <div className="flex lg:h-screen justify-center items-center pt-44 lg:pt-44 px-6">
       <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md">
         <img
