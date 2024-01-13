@@ -54,7 +54,7 @@ function App() {
         {
           path : "/enroll/:id",
           element : <PrivateRouter><Enroll /></PrivateRouter>,
-          loader : ({params}) => fetch(`http://localhost:5000/${params.id}`)
+          loader : ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`)
         },
         {
           path : "/contact",
