@@ -1,15 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import useAxiosPublic from "../../../Hook/useAxiosPublic";
 import { MdArrowRightAlt } from "react-icons/md";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
 
 const Enroll = () => {
   window.scrollTo(0, 0);
   const { id } = useParams();
-  const {isLoading} = useContext(AuthContext)
+  const { isLoading, setIsLoading } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate()
   const [enroll, setEnroll] = useState([]);
 
   useEffect(() => {
@@ -18,9 +21,34 @@ const Enroll = () => {
       setEnroll(res.data);
     });
   }, []);
-  return isLoading ? <div className="flex text-3xl justify-center items-center h-screen">
-  <ScaleLoader color="#2563eb" />
-</div> : (
+
+  const handleRedirectToPayment = () => {
+   
+       navigate(`/payment/${enroll._id}`) 
+      let timerInterval;
+      Swal.fire({
+        title: "Preparing Your Enrollment... Redirecting to Payment Gateway!",
+        timer: 2000,
+        timerProgressBar: false,
+        didOpen: () => {
+          Swal.showLoading();
+          const timer = Swal.getPopup().querySelector("b");
+          timerInterval = setInterval(() => {
+            timer.textContent = `${Swal.getTimerLeft()}`;
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("I was closed by the timer");
+        }
+      });
+   
+  };
+  return (
     <div className="flex lg:h-screen justify-center items-center pt-44 lg:pt-44 px-6">
       <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md">
         <img
@@ -54,12 +82,15 @@ const Enroll = () => {
             <p class="">Start Date : {enroll.courseMonth} 1</p>
           </div>
           <div className=" mt-6 flex justify-between items-center">
-            <Link to={`/payment/${enroll._id}`} className="flex items-center gap-1 px-5  py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
+            <button
+              onClick={handleRedirectToPayment}
+              className="flex items-center gap-1 px-5  py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+            >
               Enroll Now
-            </Link>
+            </button>
             <h3 className=" text-xl font-extrabold text-blue-500">
-            $ {enroll.coursePrice}
-          </h3>
+              $ {enroll.coursePrice}
+            </h3>
           </div>
         </div>
       </div>
