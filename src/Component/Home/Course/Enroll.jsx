@@ -28,7 +28,7 @@ const Enroll = () => {
       let timerInterval;
       Swal.fire({
         title: "Preparing Your Enrollment! Redirecting to Payment Page!",
-        timer: 2000,
+        timer: 1500,
         timerProgressBar: false,
         didOpen: () => {
           Swal.showLoading();

@@ -7,7 +7,7 @@ const MainCourse = () => {
   const [course] = useCourse();
 
   return (
-    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-36 py-20 ">
+    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-36 py-32 ">
       <div
         data-aos="zoom-in"
         data-aos-duration="2000"
