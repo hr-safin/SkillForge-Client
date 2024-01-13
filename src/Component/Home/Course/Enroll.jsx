@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxiosPublic from "../../../Hook/useAxiosPublic";
 import { MdArrowRightAlt } from "react-icons/md";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
@@ -54,9 +54,9 @@ const Enroll = () => {
             <p class="">Start Date : {enroll.courseMonth} 1</p>
           </div>
           <div className=" mt-6 flex justify-between items-center">
-            <button className="flex items-center gap-1 px-5  py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
+            <Link to={`/payment/${enroll._id}`} className="flex items-center gap-1 px-5  py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
               Enroll Now
-            </button>
+            </Link>
             <h3 className=" text-xl font-extrabold text-blue-500">
             $ {enroll.coursePrice}
           </h3>

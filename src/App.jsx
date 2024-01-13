@@ -20,6 +20,7 @@ import AboutSection from "./Component/Home/AboutSection/AboutSection";
 import ContactUs from "./Component/Home/ContactUs/ContactUs";
 import Enroll from "./Component/Home/Course/Enroll";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
+import Payment from "./Component/Home/Course/Payment/Payment";
 
 
 const queryClient = new QueryClient()
@@ -55,6 +56,11 @@ function App() {
           path : "/enroll/:id",
           element : <PrivateRouter><Enroll /></PrivateRouter>,
           loader : ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`)
+        },
+        {
+          path : "/payment/:id",
+          element : <PrivateRouter><Payment /></PrivateRouter>,
+          loader : ({params}) => fetch(`http://localhost:5000/payment/${params.id}`)
         },
         {
           path : "/contact",
