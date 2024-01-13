@@ -1,7 +1,7 @@
 import React, {  useEffect } from 'react';
 import useAxiosPublic from '../../../../Hook/useAxiosPublic';
 import { useParams } from 'react-router-dom';
-
+import { loadStripe } from '@stripe/stripe-js';
 
 const Payment = () => {
     window.scrollTo(0, 0);
@@ -18,7 +18,7 @@ const Payment = () => {
 
     return (
         <div>
-            ihkjkkj
+            
         </div>
     );
 };
