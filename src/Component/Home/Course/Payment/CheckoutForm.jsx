@@ -1,7 +1,8 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React from "react";
+import React, { useState } from "react";
 
 const CheckoutForm = () => {
+    const [error, setError] = useState("")
   const stripe = useStripe();
   const elements = useElements();
   const handleSubmit = async (e) => {
@@ -17,23 +18,36 @@ const CheckoutForm = () => {
       return;
     }
 
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
-        type : "card",
-        card
-    })
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card,
+    });
 
-    if(error){
-        console.log("[error]", error)
-    }
-    else{
-        console.log("[paymentMethod]", paymentMethod)
+    if (error) {
+      console.log("[error]", error);
+      setError(error.message)
+    } else {
+      console.log("[paymentMethod]", paymentMethod);
+      setError("")
     }
   };
   return (
     <div>
-      <form className=" shadow-lg h-[220px] p-7 border rounded-md" onSubmit={handleSubmit}>
+      <form
+        className=" shadow-lg h-[295px] p-7 border rounded-md"
+        onSubmit={handleSubmit}
+      >
         <div>
-          
+          <input
+            type="text"
+            name="name"
+            id="name"
+            className=" mb-5 outline-none border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  "
+            placeholder="Your name"
+            required
+          />
+        </div>
+        <div>
           <input
             type="email"
             name="email"
@@ -44,11 +58,11 @@ const CheckoutForm = () => {
           />
         </div>
         <CardElement
-        className="  outline-none border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+          className="  outline-none border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
           options={{
             style: {
               base: {
-                border : "1px solid black",
+                border: "1px solid black",
                 fontSize: "16px",
                 color: "#424770",
                 "::placeholder": {
@@ -68,6 +82,7 @@ const CheckoutForm = () => {
         >
           Pay
         </button>
+        <p className=" pt-2 text-sm text-red-600">{error}</p>
       </form>
     </div>
   );
