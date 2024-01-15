@@ -3,9 +3,10 @@ import useAxiosPublic from '../../../../Hook/useAxiosPublic';
 import { useParams } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import {CardElement, Elements, useElements, useStripe} from '@stripe/react-stripe-js';
+import CheckoutForm from './CheckoutForm';
 
 
-const stripePromise = loadStripe()
+const stripePromise = loadStripe("pk_test_51OEWOiDrduCbZi0VLPT7T9eLn2TvSS9tXvPPjYobROOoRrllCLoTp2vyShnGnVvM7ahdy3x44PvHK3tQZXfFNR6P00oSh3z0UK")
 
 const Payment = () => {
     window.scrollTo(0, 0);
@@ -21,9 +22,9 @@ const Payment = () => {
 
 
     return (
-        <div className=' flex justify-center items-center h-screen'>
+        <div className=' max-w-sm mx-auto  pt-[280px]  h-screen'>
             <Elements stripe={stripePromise}>
-                
+              <CheckoutForm />
             </Elements>
         </div>
     );
