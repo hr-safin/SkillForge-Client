@@ -22,7 +22,7 @@ const Payment = () => {
 
 
     return (
-        <div className=' max-w-sm mx-auto  pt-[280px]  h-screen'>
+        <div className=' max-w-sm mx-auto pt-[230px] md:pt-[280px]  h-screen'>
             <Elements stripe={stripePromise}>
               <CheckoutForm />
             </Elements>
