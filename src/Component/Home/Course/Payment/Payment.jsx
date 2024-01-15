@@ -29,11 +29,16 @@ const Payment = () => {
 
 
     return (
-        <div className=' max-w-sm mx-auto pt-[230px] md:pt-[280px]  h-screen'>
+        <>
+        <div className=' max-w-sm mx-auto pt-[130px] md:pt-[160px]  h-screen'>
+            <div className=' pb-14'>
+                <h2 className=' text-3xl md:text-4xl font-bold text-center'>Payment </h2>
+            </div>
             <Elements stripe={stripePromise}>
               <CheckoutForm total={total} />
             </Elements>
         </div>
+        </>
     );
 };
 

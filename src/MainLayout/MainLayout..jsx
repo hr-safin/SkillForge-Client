@@ -9,7 +9,7 @@ export const MainLayout = () => {
 
   const location = useLocation()
 
-  const noHeaderFooter = location.pathname.includes("login") ||  location.pathname.includes("signUp")
+  const noHeaderFooter = location.pathname.includes("login") ||  location.pathname.includes("signUp") || location.pathname.includes("/payment")
   return (
     <div className=''>
       {noHeaderFooter ||  <NavBar /> }

@@ -2,18 +2,24 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useEffect, useState } from "react";
 import useAxiosPublic from "../../../../Hook/useAxiosPublic";
 
-const CheckoutForm = ({total}) => {
-  const [error, setError] = useState("")
+const CheckoutForm = ({ total }) => {
+  const [error, setError] = useState("");
+  const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
   const elements = useElements();
-  const axiosPublic = useAxiosPublic()
+  const axiosPublic = useAxiosPublic();
 
-  
   useEffect(() => {
-
-    
-  }, [])
-
+    if (total > 0) {
+      axiosPublic
+        .post("/create-payment-intent", { price: total })
+        .then((res) => {
+         
+          console.log(res.data);
+          setClientSecret(res.data.clientSecret);
+        });
+    }
+  }, [axiosPublic, total]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,10 +41,10 @@ const CheckoutForm = ({total}) => {
 
     if (error) {
       console.log("[error]", error);
-      setError(error.message)
+      setError(error.message);
     } else {
       console.log("[paymentMethod]", paymentMethod);
-      setError("")
+      setError("");
     }
   };
   return (
@@ -72,7 +78,6 @@ const CheckoutForm = ({total}) => {
           options={{
             style: {
               base: {
-                border: "1px solid black",
                 fontSize: "16px",
                 color: "#424770",
                 "::placeholder": {
@@ -88,9 +93,9 @@ const CheckoutForm = ({total}) => {
         <button
           className="flex items-center gap-2 justify-center bg-blue-500 hover:bg-blue-600  mt-6 px-4 py-2 rounded-md w-full text-white"
           type="submit"
-          disabled={!stripe}
+          disabled={!stripe || !clientSecret}
         >
-          Pay  <span>${total}</span>
+          Pay <span>${total}</span>
         </button>
         <p className=" pt-2 text-sm text-red-600">{error}</p>
       </form>
