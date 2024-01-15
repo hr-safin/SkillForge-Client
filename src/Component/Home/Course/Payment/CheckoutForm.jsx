@@ -1,10 +1,20 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import useAxiosPublic from "../../../../Hook/useAxiosPublic";
 
-const CheckoutForm = () => {
-    const [error, setError] = useState("")
+const CheckoutForm = ({total}) => {
+  const [error, setError] = useState("")
   const stripe = useStripe();
   const elements = useElements();
+  const axiosPublic = useAxiosPublic()
+
+  
+  useEffect(() => {
+
+    
+  }, [])
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -76,11 +86,11 @@ const CheckoutForm = () => {
           }}
         />
         <button
-          className=" bg-blue-500 hover:bg-blue-600  mt-6 px-4 py-2 rounded-md w-full text-white"
+          className="flex items-center gap-2 justify-center bg-blue-500 hover:bg-blue-600  mt-6 px-4 py-2 rounded-md w-full text-white"
           type="submit"
           disabled={!stripe}
         >
-          Pay
+          Pay  <span>${total}</span>
         </button>
         <p className=" pt-2 text-sm text-red-600">{error}</p>
       </form>

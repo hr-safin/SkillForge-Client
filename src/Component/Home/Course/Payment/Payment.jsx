@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react';
+import React, {  useEffect, useState } from 'react';
 import useAxiosPublic from '../../../../Hook/useAxiosPublic';
 import { useParams } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
@@ -12,19 +12,26 @@ const Payment = () => {
     window.scrollTo(0, 0);
     const {id} = useParams()
     const axiosPublic =  useAxiosPublic()
+    const [total, setTotal] = useState(null)
     console.log(id)
     useEffect(() => {
         axiosPublic.get(`/payment/${id}`)
         .then(res => {
             console.log(res.data)
+            // const grandTotal = res.data.reduce((total, item) => total + item.coursePrice, 0)
+            setTotal(res.data.coursePrice)
+            console.log(res.data.coursePrice)
+            
         })
     }, [])
+
+
 
 
     return (
         <div className=' max-w-sm mx-auto pt-[230px] md:pt-[280px]  h-screen'>
             <Elements stripe={stripePromise}>
-              <CheckoutForm />
+              <CheckoutForm total={total} />
             </Elements>
         </div>
     );
