@@ -50,7 +50,7 @@ const NavBar = () => {
         <li>
           <div className="hidden lg:flex items-center mt-1">
             {user?.email ? (
-              <div className="flex items-center">
+              <div className="flex transition-all duration-700 ease-in-out  items-center">
                 <details className="dropdown dropdown-end">
                   <summary className="m-1 btn bg-white ">
                     <div className="flex items-center gap-2">
