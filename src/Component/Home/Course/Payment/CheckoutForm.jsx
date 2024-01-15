@@ -1,6 +1,10 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import useAxiosPublic from "../../../../Hook/useAxiosPublic";
+import { AuthContext } from "../../../../AuthProvider/AuthProvider";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = ({ total }) => {
   const [error, setError] = useState("");
@@ -8,6 +12,9 @@ const CheckoutForm = ({ total }) => {
   const stripe = useStripe();
   const elements = useElements();
   const axiosPublic = useAxiosPublic();
+  const {user} = useContext(AuthContext)
+  const formRef = useRef(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (total > 0) {
@@ -46,10 +53,41 @@ const CheckoutForm = ({ total }) => {
       console.log("[paymentMethod]", paymentMethod);
       setError("");
     }
+
+    // confirm payment
+
+    const {paymentIntent, error: confirmError} = await stripe.confirmCardPayment(clientSecret,{
+        payment_method : {
+            card : card,
+            billing_details : {
+                email : user?.email || "anonymous",
+                name : user?.displayName || "anonymous"
+            }
+        }
+    })
+
+    if(confirmError){
+        console.log("confirmError", confirmError)
+    }
+
+    else{
+        console.log("paymentIntent", paymentIntent)
+        if(paymentIntent.status === "succeeded"){
+            // Swal.fire({
+            //     title: "Payment Successful!",
+            //     text: `Your Transaction Id is ${paymentIntent.id}`,
+            //     icon: "success"
+            //   });
+            navigate("/paymentSuccessful")
+
+            formRef.current.reset()
+        }
+    }
   };
   return (
     <div>
       <form
+        ref={formRef}
         className=" shadow-lg h-[295px] p-7 border rounded-md"
         onSubmit={handleSubmit}
       >
