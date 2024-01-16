@@ -9,16 +9,12 @@ const ContactUs = () => {
       <section class="bg-white">
         <div class="container  py-12 mx-auto">
           <div
-          data-aos="zoom-in"
+          data-aos="fade-up"
           data-aos-duration="2000"
           >
             <h2 className=" mb-5 rounded-full w-[135px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-lg ">
               Contact Us
             </h2>
-
-            <h1 class="mt-2 text-2xl font-bold text-gray-800 md:text-3xl ">
-              Get In Touch
-            </h1>
           </div>
 
           <div 
