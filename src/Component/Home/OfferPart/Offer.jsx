@@ -5,13 +5,13 @@ import { PiCertificateBold } from "react-icons/pi";
 const Offer = () => {
   return (
     <div className="md:px-6 lg:px-16 xl:px-32 px-6 md:pt-20 lg:pt-0 lg:pb-20 py-10 ">
-      <div className=" grid-cols-1 md:grid-cols-2 place-items-center lg:grid-cols-3 gap-10 grid">
+      <div className=" gap-10 lg:gap-4 flex flex-row flex-wrap justify-center items-center ">
         <div
           data-aos="fade-up"
           data-aos-duration="1500"
-          className=" hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
+          className=" w-[410px] h-[180px] hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
         >
-          <div className=" flex lg:flex-col xl:flex-row items-center gap-3">
+          <div className="  flex lg:flex-col xl:flex-row items-center gap-3">
             <span className=" text-3xl bg-blue-500 py-3 px-3 rounded-full text-white">
               <LuGraduationCap />
             </span>
@@ -25,7 +25,7 @@ const Offer = () => {
         <div
           data-aos="fade-up"
           data-aos-duration="2000"
-          className=" hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
+          className=" w-[410px] h-[180px] hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
         >
           <div className="  flex lg:flex-col xl:flex-row items-center gap-3">
             <span className=" text-3xl bg-blue-500 py-3 px-3 rounded-full text-white">
@@ -43,7 +43,7 @@ const Offer = () => {
         <div
           data-aos="fade-up"
           data-aos-duration="2500"
-          className="  hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
+          className="w-[410px] h-[180px]  hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
         >
           <div className="  flex lg:flex-col xl:flex-row items-center gap-3">
             <span className=" text-3xl bg-blue-500 py-3 px-3 rounded-full text-white">

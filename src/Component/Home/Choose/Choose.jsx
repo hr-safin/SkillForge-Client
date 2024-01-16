@@ -77,7 +77,7 @@ const Choose = () => {
         data-aos-duration="2000"
         className="flex-1 rounded-full">
           <img
-            className=" border-[10px] border-gray-100  w-[90%] rounded-full"
+            className=" border-[10px] border-gray-100 mx-auto sm:w-[70%]  lg:w-[90%] rounded-full"
             src="https://haminathemes.net/educad-preview/assets/img/chose/chose-7.jpg"
             alt=""
           />
