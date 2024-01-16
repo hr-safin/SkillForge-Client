@@ -42,7 +42,7 @@ export const Banner = () => {
           <div 
           data-aos="zoom-in"
           data-aos-duration="2000"
-          className="hidden md:flex md:flex-col absolute shadow-md bg-white px-5 py-2 rounded-md lg:-left-44 right-96 w-[220px]">
+          className="hidden md:flex md:flex-col absolute shadow-md bg-white px-5 py-2 rounded-md md:-left-36 lg:-left-44 right-96 w-[220px]">
             <div>
               <p className=" font-bold">Our Happy Students</p>
               <p className=" font-bold text-blue-500">12+ online course</p>
