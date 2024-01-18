@@ -15,9 +15,8 @@ const CheckoutForm = ({ total }) => {
   const {user} = useContext(AuthContext)
   const formRef = useRef(null)
   const navigate = useNavigate()
-
   useEffect(() => {
-    if (total > 0) {
+    if (total.coursePrice > 0) {
       axiosPublic
         .post("/create-payment-intent", { price: total })
         .then((res) => {
@@ -72,6 +71,16 @@ const CheckoutForm = ({ total }) => {
 
     else{
         console.log("paymentIntent", paymentIntent)
+
+         const formData = e.target
+         const name = formData.value.name
+         const email = formData.value.email
+         const courseName = total.courseName
+
+         const enrollInfo = {name, email, courseName}
+
+         console.log(enrollInfo)
+
         if(paymentIntent.status === "succeeded"){
             // Swal.fire({
             //     title: "Payment Successful!",
@@ -79,6 +88,8 @@ const CheckoutForm = ({ total }) => {
             //     icon: "success"
             //   });
             navigate("/paymentSuccessful")
+
+            axiosPublic.post("/enrolled")
 
             formRef.current.reset()
         }
@@ -133,7 +144,7 @@ const CheckoutForm = ({ total }) => {
           type="submit"
           disabled={!stripe || !clientSecret}
         >
-          Pay <span>${total}</span>
+          Pay <span>${total.coursePrice}</span>
         </button>
         <p className=" pt-2 text-sm text-red-600">{error}</p>
       </form>

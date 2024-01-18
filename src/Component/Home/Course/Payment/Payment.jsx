@@ -12,21 +12,19 @@ const Payment = () => {
     window.scrollTo(0, 0);
     const {id} = useParams()
     const axiosPublic =  useAxiosPublic()
-    const [total, setTotal] = useState(null)
+    const [total, setTotal] = useState([])
     console.log(id)
     useEffect(() => {
         axiosPublic.get(`/payment/${id}`)
         .then(res => {
             console.log(res.data)
-            // const grandTotal = res.data.reduce((total, item) => total + item.coursePrice, 0)
-            setTotal(res.data.coursePrice)
-            console.log(res.data.coursePrice)
+            setTotal(res.data)
             
         })
     }, [])
 
 
-
+     console.log(total)
 
     return (
         <>
