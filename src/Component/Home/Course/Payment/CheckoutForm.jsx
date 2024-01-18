@@ -6,7 +6,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 import { useNavigate } from "react-router-dom";
 
-const CheckoutForm = ({ total }) => {
+const CheckoutForm = ({ total, enroll }) => {
   const [error, setError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const stripe = useStripe();
@@ -16,7 +16,7 @@ const CheckoutForm = ({ total }) => {
   const formRef = useRef(null)
   const navigate = useNavigate()
   useEffect(() => {
-    if (total.coursePrice > 0) {
+    if (total > 0) {
       axiosPublic
         .post("/create-payment-intent", { price: total })
         .then((res) => {
@@ -75,11 +75,8 @@ const CheckoutForm = ({ total }) => {
          const formData = e.target
          const name = formData.value.name
          const email = formData.value.email
-         const courseName = total.courseName
 
-         const enrollInfo = {name, email, courseName}
-
-         console.log(enrollInfo)
+         const enrollInfo = {name, email}
 
         if(paymentIntent.status === "succeeded"){
             // Swal.fire({
@@ -89,7 +86,7 @@ const CheckoutForm = ({ total }) => {
             //   });
             navigate("/paymentSuccessful")
 
-            axiosPublic.post("/enrolled")
+            // axiosPublic.post("/enrolled")
 
             formRef.current.reset()
         }
@@ -144,7 +141,7 @@ const CheckoutForm = ({ total }) => {
           type="submit"
           disabled={!stripe || !clientSecret}
         >
-          Pay <span>${total.coursePrice}</span>
+          Pay <span>${total}</span>
         </button>
         <p className=" pt-2 text-sm text-red-600">{error}</p>
       </form>

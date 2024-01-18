@@ -12,19 +12,21 @@ const Payment = () => {
     window.scrollTo(0, 0);
     const {id} = useParams()
     const axiosPublic =  useAxiosPublic()
-    const [total, setTotal] = useState([])
+    const [total, setTotal] = useState(null)
+    const [enrolledCourse, setEnrolled] = useState([])
     console.log(id)
     useEffect(() => {
         axiosPublic.get(`/payment/${id}`)
         .then(res => {
-            console.log(res.data)
-            setTotal(res.data)
+            console.log(res.data.coursePrice)
+            setTotal(res.data.coursePrice)
+            setEnrolled(res.data)
             
         })
     }, [])
 
 
-     console.log(total)
+
 
     return (
         <>
@@ -33,7 +35,7 @@ const Payment = () => {
                 <h2 className=' text-3xl md:text-4xl font-bold text-center'>Payment </h2>
             </div>
             <Elements stripe={stripePromise}>
-              <CheckoutForm total={total} />
+              <CheckoutForm total={total} enroll={enrolledCourse} />
             </Elements>
         </div>
         </>
