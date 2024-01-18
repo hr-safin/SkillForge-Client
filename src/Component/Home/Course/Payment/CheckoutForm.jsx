@@ -72,18 +72,10 @@ const CheckoutForm = ({ total, enroll }) => {
     else{
         console.log("paymentIntent", paymentIntent)
 
-         const formData = e.target
-         const name = formData.value.name
-         const email = formData.value.email
-
-         const enrollInfo = {name, email}
+        
 
         if(paymentIntent.status === "succeeded"){
-            // Swal.fire({
-            //     title: "Payment Successful!",
-            //     text: `Your Transaction Id is ${paymentIntent.id}`,
-            //     icon: "success"
-            //   });
+          
             navigate("/paymentSuccessful")
 
             // axiosPublic.post("/enrolled")
