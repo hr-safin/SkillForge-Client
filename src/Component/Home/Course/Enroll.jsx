@@ -19,6 +19,10 @@ const Enroll = () => {
     axiosPublic.get(`/enroll/${id}`).then((res) => {
       console.log(res.data);
       setEnroll(res.data);
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 1000)
+      
     });
   }, []);
 
