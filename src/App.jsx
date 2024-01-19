@@ -22,6 +22,7 @@ import Enroll from "./Component/Home/Course/Enroll";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
 import Payment from "./Component/Home/Course/Payment/Payment";
 import SuccesfulPayment from "./Component/Home/Course/Payment/SuccesfulPayment";
+import MyCourses from "./Component/MyCourses/MyCourses";
 
 
 const queryClient = new QueryClient()
@@ -79,6 +80,10 @@ function App() {
           path: "/signUp",
           element: <SignUp />,
         },
+        {
+          path : "/myCourse",
+          element : <MyCourses />
+        }
       ],
     },
   ]);

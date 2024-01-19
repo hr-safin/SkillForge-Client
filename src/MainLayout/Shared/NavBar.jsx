@@ -64,7 +64,7 @@ const NavBar = () => {
                   </summary>
                   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                     <li>
-                      <a>My Courses</a>
+                      <Link to="/myCourse">My Courses</Link>
                     </li>
                     <li>
                       <button onClick={handleLogOut}>Logout</button>
