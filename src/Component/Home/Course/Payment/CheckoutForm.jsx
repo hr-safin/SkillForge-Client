@@ -29,6 +29,7 @@ const CheckoutForm = ({ total, enroll }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const name = e.target.value.
 
     if (!stripe || !elements) {
       return;
