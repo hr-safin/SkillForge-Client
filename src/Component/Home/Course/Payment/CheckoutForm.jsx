@@ -34,6 +34,10 @@ const CheckoutForm = ({ total, enroll }) => {
     let name = form.get("name")
     let email = form.get("email")
 
+    // const form = e.target
+    // const name = form.name.value
+    // const email = form.email.value
+
     let enrolledInfo = {...enroll, name, email}
    console.log(enrolledInfo)
     if (!stripe || !elements) {
