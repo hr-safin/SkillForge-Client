@@ -29,8 +29,13 @@ const CheckoutForm = ({ total, enroll }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.value.
 
+    const form = new FormData(e.currentTarget)
+    let name = form.get("name")
+    let email = form.get("email")
+
+    let enrolledInfo = {...enroll, name, email}
+   console.log(enrolledInfo)
     if (!stripe || !elements) {
       return;
     }
@@ -79,7 +84,13 @@ const CheckoutForm = ({ total, enroll }) => {
           
             navigate("/paymentSuccessful")
 
-            // axiosPublic.post("/enrolled")
+            axiosPublic.post("/enrolled", enrolledInfo)
+            .then(res => {
+              console.log(res.data)
+              if(res.data.insertedId){
+                alert("added")
+              }
+            })
 
             formRef.current.reset()
         }
