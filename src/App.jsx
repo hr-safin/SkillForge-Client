@@ -23,6 +23,7 @@ import PrivateRouter from "./PrivateRouter/PrivateRouter";
 import Payment from "./Component/Home/Course/Payment/Payment";
 import SuccesfulPayment from "./Component/Home/Course/Payment/SuccesfulPayment";
 import MyCourses from "./Component/MyCourses/MyCourses";
+import AllUser from "./Hook/AllUser";
 
 
 const queryClient = new QueryClient()
@@ -83,6 +84,10 @@ function App() {
         {
           path : "/myCourse",
           element : <MyCourses />
+        },
+        {
+          path : "/allUser",
+          element : <AllUser />
         }
       ],
     },
