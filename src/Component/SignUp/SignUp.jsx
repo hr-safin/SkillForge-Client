@@ -5,38 +5,50 @@ import { useForm } from "react-hook-form";
 import { getAuth, updateProfile } from "firebase/auth";
 import { app } from "../../firebase/firebase.config";
 import toast from "react-hot-toast";
-
+import useAxiosSecure from "../../Hook/useAxiosSecure";
 
 const SignUp = () => {
-  window.scrollTo(0,0)
+  window.scrollTo(0, 0);
   const { user, createUser } = useContext(AuthContext);
-  const { register, handleSubmit, formState: { errors }, watch } = useForm();
-  const navigate = useNavigate()
-  const location = useLocation()
-  const auth = getAuth(app)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+  } = useForm();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const auth = getAuth(app);
+  const axiosSecure = useAxiosSecure();
 
   const onSubmit = (data) => {
     console.log(data);
 
-    const tostId = toast.loading("Account Created Successfully")
+    const tostId = toast.loading("Account Created Successfully");
     createUser(data.email, data.password)
-    .then(result => {
-        console.log(result.user)
+      .then((result) => {
+        console.log(result.user);
         updateProfile(auth.currentUser, {
-          displayName: data.name
-        })
-        .then(result =>{
+          displayName: data.name,
+        }).then((result) => {
+          const userDetails = {
+            name: data.name,
+            email: data.email,
+          };
 
-          toast.success("Account Created Successfully", {id : tostId})
-          navigate(location.state ? location.state : "/")
-          
-        })
-    })
-    .catch(error => {
-        console.log(error)
-    })
+          axiosSecure.post("/allUser", userDetails).then((res) => {
+            if (res.data.insertedId) {
+              toast.success("Account Created Successfully", { id: tostId });
+              navigate(location.state ? location.state : "/");
+            }
+          });
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
- 
+
   return (
     <div>
       <section class=" pt-10  w-full">
@@ -85,7 +97,6 @@ const SignUp = () => {
                     id="email"
                     class="outline-none border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     placeholder="name@xxx.com"
-                    
                   />
                   {errors.email?.type === "required" && (
                     <p className=" py-1 text-red-500">email is required</p>
@@ -100,12 +111,12 @@ const SignUp = () => {
                     Password
                   </label>
                   <input
-                    {...register("password",{
-                     required: true,
-                     minLength : 6,
-                     maxLength : 20,
-                     pattern : /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
-                    
+                    {...register("password", {
+                      required: true,
+                      minLength: 6,
+                      maxLength: 20,
+                      pattern:
+                        /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
                     })}
                     type="password"
                     name="password"
@@ -128,7 +139,6 @@ const SignUp = () => {
                       aria-describedby="terms"
                       type="checkbox"
                       class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 "
-                      
                     />
                   </div>
                   <div class="ml-3 text-sm">

@@ -1,49 +1,60 @@
 import React, { useContext, useState } from "react";
-import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import useAxiosPublic from "../../Hook/useAxiosPublic";
 
 const Login = () => {
-   window.scrollTo(0,0)
-    const {user, signIn,googleLogin} = useContext(AuthContext)
-   const [error,setError] = useState("")
-   const navigate = useNavigate()
-   const location = useLocation()
-    const handleLogin = (e) => {
-        e.preventDefault()
-        const form = e.target
-        const email = form.value.email
-        const password = form.value.password
-        
-        setError("")
-        const toastId = toast.loading("Login Successful")
-        signIn(email, password)
-        .then(result => {
-            console.log(result.user)
-            toast.success("Login Successful", {id : toastId})
-            setTimeout(() => {
-              navigate(location.state ? location.state : "/")
-            }, 1500)
-            
-            
-        })
-        .catch(error => console.log(error.message))
-    }
+  window.scrollTo(0, 0);
+  const { user, signIn, googleLogin } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const axiosPublic = useAxiosPublic();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.value.email;
+    const password = form.value.password;
 
-    const handleGoogleLogin = () => {
-       
-       const toastId = toast.loading("Login Successful")
-        googleLogin()
-        .then((result) => {
-            console.log(result.user)
-            toast.success("Login Successful", {id : toastId})
+    setError("");
+    const toastId = toast.loading("Login Successful");
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Login Successful", { id: toastId });
+        setTimeout(() => {
+          navigate(location.state ? location.state : "/");
+        }, 1500);
+      })
+      .catch((error) => console.log(error.message));
+  };
+
+  const handleGoogleLogin = () => {
+    const toastId = toast.loading("Login Successful");
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+        const userDetails = {
+          name: result?.user?.displayName,
+          email: result?.user?.email,
+        };
+        axiosPublic.post("/allUser", userDetails).then((res) => {
+          if (res.data.insertedId) {
+            toast.success("Login Successful", { id: toastId });
             setTimeout(() => {
-              navigate(location.state ? location.state : "/")
-            }, 1500)
-            
-        })
-        .catch(error => console.log(error))
-    }
+              navigate(location.state ? location.state : "/");
+            }, 1500);
+          }
+        });
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="">
       <section className=" h-screen flex justify-center items-center">
@@ -126,7 +137,7 @@ const Login = () => {
 
                 <div className=" space-y-1 lg:py-1">
                   <button
-                   onClick={handleGoogleLogin}
+                    onClick={handleGoogleLogin}
                     type="button"
                     className=" inline-flex w-full items-center justify-center rounded-md   text-gray-700  border-gray-400  px-3.5 py-2.5 font-semibold transition-all duration-200 bg-gray-100 hover:text-black focus:bg-gray-100 focus:text-black focus:outline-none"
                   >
