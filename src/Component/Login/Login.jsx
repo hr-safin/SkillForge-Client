@@ -50,6 +50,11 @@ const Login = () => {
             setTimeout(() => {
               navigate(location.state ? location.state : "/");
             }, 1500);
+          } else {
+            toast.success("Login Successful", { id: toastId });
+            setTimeout(() => {
+              navigate(location.state ? location.state : "/");
+            }, 1500);
           }
         });
       })
