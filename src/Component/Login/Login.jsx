@@ -44,19 +44,18 @@ const Login = () => {
           name: result?.user?.displayName,
           email: result?.user?.email,
         };
-        axiosPublic.post("/allUser", userDetails).then((res) => {
-          if (res.data.insertedId) {
-            toast.success("Login Successful", { id: toastId });
-            setTimeout(() => {
-              navigate(location.state ? location.state : "/");
-            }, 1500);
-          } else {
-            toast.success("Login Successful", { id: toastId });
-            setTimeout(() => {
-              navigate(location.state ? location.state : "/");
-            }, 1500);
-          }
-        });
+        axiosPublic.post("/allUser", userDetails)
+        .then(res => {
+            console.log(res.data)
+            if(res.data.insertedId){
+                toast.success("Sign In Successful", {id : toastId})
+                navigate("/")
+            }
+            else{
+                toast.success("Sign In Successful", {id : toastId})
+                navigate("/") 
+            }
+        })
       })
       .catch((error) => console.log(error));
   };
