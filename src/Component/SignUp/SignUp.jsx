@@ -9,7 +9,7 @@ import useAxiosSecure from "../../Hook/useAxiosSecure";
 
 const SignUp = () => {
   window.scrollTo(0, 0);
-  const { user, createUser } = useContext(AuthContext);
+  const {createUser } = useContext(AuthContext);
   const {
     register,
     handleSubmit,

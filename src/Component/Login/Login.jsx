@@ -30,9 +30,9 @@ const Login = () => {
         toast.success("Login Successful", { id: toastId });
         setTimeout(() => {
           navigate(location.state ? location.state : "/");
-        }, 1500);
+        }, 1700);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => console.log(error));
   };
 
   const handleGoogleLogin = () => {
