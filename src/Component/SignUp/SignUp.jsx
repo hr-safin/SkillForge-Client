@@ -37,7 +37,7 @@ const SignUp = () => {
           };
 
           axiosSecure.post("/allUser", userDetails).then((res) => {
-            if (res.data.insertedId) {
+            if(res.data.insertedId) {
               toast.success("Account Created Successfully", { id: tostId });
               navigate(location.state ? location.state : "/");
             }
@@ -67,7 +67,6 @@ const SignUp = () => {
                     for="name"
                     class="block mb-2 text-sm font-medium text-gray-900 "
                   >
-                    {" "}
                     Name
                   </label>
                   <input
