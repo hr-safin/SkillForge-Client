@@ -82,8 +82,8 @@ function App() {
           element: <SignUp />,
         },
         {
-          path : "/myCourse",
-          element : <MyCourses />
+          path : "/enrolled",
+          element : <PrivateRouter><MyCourses /></PrivateRouter>,
         },
         {
           path : "/allUser",

@@ -64,7 +64,7 @@ const NavBar = () => {
                   </summary>
                   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                     <li>
-                      <Link to="/myCourse">My Courses</Link>
+                      <Link to="/enrolled">My Courses</Link>
                     </li>
                     <li>
                       <button onClick={handleLogOut}>Logout</button>
@@ -106,7 +106,7 @@ const NavBar = () => {
             <ul className="md:h-[100vh] bg-gray-50 h-[100vh] p-10 py-32 flex flex-col gap-6 justify-center items-center">
               {user && <>
                 <p className=" font-bold text-lg pb-4">{user.displayName}</p>
-                <Link to="/myCourse">My Courses</Link>
+                <Link to="/enrolled">My Courses</Link>
               </> }
               <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
                 <Link to="/">Home</Link>
