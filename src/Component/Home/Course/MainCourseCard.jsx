@@ -8,7 +8,7 @@ const MainCourseCard = ({ item }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const handleRedirect = () => {
-    if (user?.email) {
+    if (user && user?.email) {
       navigate(location.state);
     } else {
       navigate("/login");
