@@ -7,13 +7,13 @@ const PrivateRouter = ({ children }) => {
   const { user, isLoading } = useContext(AuthContext);
   const location = useLocation();
 
-  // if (isLoading) {
-  //   return (
-  //     <div className="flex text-3xl justify-center items-center h-screen">
-  //       <ScaleLoader color="#2563eb" />
-  //     </div>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <div className="flex text-3xl justify-center items-center h-screen">
+        <ScaleLoader color="#2563eb" />
+      </div>
+    );
+  }
   if ( user && user?.email) {
     return children;
   }
