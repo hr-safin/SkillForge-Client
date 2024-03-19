@@ -52,7 +52,7 @@ const SignUp = () => {
   return (
     <div>
       <section class=" pt-10  w-full">
-        <div class="flex flex-col items-center py-10 justify-center px-6  mx-auto md:h-screen lg:py-0 w-[100%] lg:w-[80%]">
+        <div class="flex flex-col items-center py-10 justify-center px-6  mx-auto md:h-screen lg:mt-[-64px] w-[100%] lg:w-[80%]">
           <div class="w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0  ">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-6">
               <h1 class=" font-bold leading-tight tracking-tight text-gray-900 text-2xl md:text-3xl text-center ">
