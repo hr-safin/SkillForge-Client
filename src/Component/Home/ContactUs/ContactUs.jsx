@@ -1,10 +1,10 @@
 import React from "react";
 
 const ContactUs = () => {
-  window.scrollTo(0,0)
+  
   return (
     <div
-      className="md:px-6 lg:px-16 xl:px-32 px-6 md:pt-60 lg:pt-28 py-24 "
+      className="md:px-6 lg:px-16 xl:px-32 px-6 md:pt-60 lg:pt-28 pt-[400px] "
     >
       <section class="bg-white">
         <div class="container  py-12 mx-auto">

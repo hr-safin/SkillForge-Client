@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
 const Choose = () => {
   return (
-    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-20 ">
+    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-4 ">
       <div className=" flex flex-col lg:flex-row lg:justify-center items-center h-screen lg:gap-16 gap-20">
         <div className="flex-1 lg:w-[70%] mx-auto">
           <h2

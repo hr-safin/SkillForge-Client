@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     <div>
-        <footer class="bg-white lg:px-32 px-4 pt-72 lg:pt-40">
+        <footer class="bg-white lg:px-32 px-4 pt-24 lg:pt-32">
     <div class="container  py-12 mx-auto">
         <div
         data-aos="fade-up"
