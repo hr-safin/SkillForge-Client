@@ -58,12 +58,12 @@ function App() {
         {
           path : "/enroll/:id",
           element : <PrivateRouter><Enroll /></PrivateRouter>,
-          loader : ({params}) => fetch(`http://localhost:5000/enroll/${params.id}`)
+          loader : ({params}) => fetch(`https://skill-forge-server.vercel.app/enroll/${params.id}`)
         },
         {
           path : "/payment/:id",
           element : <PrivateRouter><Payment /></PrivateRouter>,
-          loader : ({params}) => fetch(`http://localhost:5000/payment/${params.id}`)
+          loader : ({params}) => fetch(`https://skill-forge-server.vercel.app/payment/${params.id}`)
         },
         {
            path : "/paymentSuccessful",
