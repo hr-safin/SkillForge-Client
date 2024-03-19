@@ -1,24 +1,17 @@
 import React, { useContext, useEffect } from "react";
-import useAxiosPublic from "../../Hook/useAxiosPublic";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
+import useEnrolledCourse from "../../Hook/useEnrolledCourse";
 
 const MyCourses = () => {
-  const axiosPublic = useAxiosPublic();
-  const { user } = useContext(AuthContext);
-  const { data: enrolled = [] } = useQuery({
-    queryKey: ["enrolled"],
-    queryFn: async () => {
-      const res = await axiosPublic.get(`/enrolled/${user?.email}`);
-      console.log(res.data);
-      return res.data;
-    },
-  });
+
+
+
+  const [enrolled, refetch] = useEnrolledCourse()
+  
   return (
     <>
       {enrolled.length === 0 ? (
         <div className=" flex justify-center items-center h-screen"> 
-          <h2 className=" text-4xl font-bold">Not Enrolled Any Course Yet</h2>
+          <h2 className=" text-4xl font-bold">Not Enrolled Any Course Yet!!</h2>
           </div>
       ) : (
         <div className=" px-5 min-h-[82vh] flex justify-center items-center flex-col">
