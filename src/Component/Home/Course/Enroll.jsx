@@ -12,7 +12,6 @@ const Enroll = () => {
   window.scrollTo(0, 0);
   const { id } = useParams();
   const { isLoading, setIsLoading } = useContext(AuthContext);
-  const [enrolledCourse, setEnrolledCourse] = useState("");
   const [enrolled, refetch] = useEnrolledCourse();
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
