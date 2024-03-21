@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
 const Choose = () => {
   return (
-    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-4 ">
+    <div className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0  ">
       <div className=" flex flex-col lg:flex-row lg:justify-center items-center h-screen lg:gap-16 gap-20">
         <div className="flex-1 lg:w-[70%] mx-auto">
           <h2
@@ -37,16 +37,16 @@ const Choose = () => {
           </p>
           <p data-aos="fade-up"
           data-aos-duration="2000"
-           className=" pt-6 flex items-center text-lg font-bold gap-3 pb-5">
-            <span className=" text-xl py-1 px-1 shadow-md  rounded-full bg-blue-500 text-white">
+           className=" pt-6 flex items-center text-base md:text-lg font-bold gap-3 pb-5">
+            <span className=" text-lg md:text-xl py-1 px-1 shadow-md  rounded-full bg-blue-500 text-white">
               <TiTick />
             </span>{" "}
             Learn from experienced educators.
           </p>
           <p data-aos="fade-up"
           data-aos-duration="2000"
-           className=" flex items-center text-lg font-bold gap-3 pb-5">
-            <span className=" text-xl py-1 px-1  rounded-full shadow-md bg-blue-500 text-white">
+           className=" flex items-center text-base md:text-lg font-bold gap-3 pb-5">
+            <span className=" text-lg md:text-xl py-1 px-1  rounded-full shadow-md bg-blue-500 text-white">
               <TiTick />
             </span>{" "}
             Access relevant and current material.
@@ -54,8 +54,8 @@ const Choose = () => {
           <p
            data-aos="fade-up"
            data-aos-duration="2000"
-          className=" flex items-center text-lg font-bold gap-3 pb-3">
-            <span className=" text-xl py-1 px-1 rounded-full shadow-md bg-blue-500 text-white">
+          className=" flex items-center text-base md:text-lg font-bold gap-3 pb-3">
+            <span className=" text-lg md:text-xl py-1 px-1 rounded-full shadow-md bg-blue-500 text-white">
               <TiTick />
             </span>{" "}
             A platform dedicated to your achievement.
@@ -64,7 +64,7 @@ const Choose = () => {
            data-aos="fade-up"
            data-aos-duration="2000"
             to="/signUp"
-            className=" mt-8 w-[157px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-500  text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all "
+            className=" mt-8  w-[138px] md:w-[157px] flex items-center gap-1 font-medium px-3.5 py-2.5 md:px-4 md:py-3 bg-blue-500   text-white hover:bg-blue-700 text-sm md:text-base rounded-full hover:scale-105 duration-700 ease-in-out transition-all  "
           >
             Register Now{" "}
             <span className="pt-1">

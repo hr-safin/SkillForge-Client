@@ -9,7 +9,7 @@ const Course = () => {
   console.log(course);
   return (
     <div
-      className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 pt-80 "
+      className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-20 pt-72 "
     >
       <div data-aos="zoom-in"
       data-aos-duration="2000"
