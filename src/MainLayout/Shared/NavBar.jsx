@@ -106,25 +106,25 @@ const NavBar = () => {
             <ul className="md:h-[100vh] bg-gray-50 h-[100vh] p-10 py-32 flex flex-col gap-6 justify-center items-center">
               {user && <>
                 <p className=" font-bold text-lg pb-4">{user.displayName}</p>
-                <Link to="/enrolled">My Courses</Link>
+                <Link className=" text-xl" to="/enrolled">My Courses</Link>
               </> }
-              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+              <li onClick={handleClick} className=" text-xl cursor-pointer hover:text-blue-600">
                 <Link to="/">Home</Link>
               </li>
-              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+              <li onClick={handleClick} className=" text-xl cursor-pointer hover:text-blue-600">
                 
                 <Link to="/aboutUs">About Us</Link>
               </li>
-              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+              <li onClick={handleClick} className=" text-xl cursor-pointer hover:text-blue-600">
                 <Link to="/course">Course</Link>
               </li>
-              <li onClick={handleClick} className="pt-2 text-xl cursor-pointer hover:text-blue-600">
+              <li onClick={handleClick} className=" text-xl cursor-pointer hover:text-blue-600">
                 <Link to="contact">Contact Us</Link>
               </li>
 
               <li>
                 {user ? (
-                  <button className=" border-2 mt-3 py-2 px-4 rounded border-blue-600" onClick={handleLogOut}>Logout</button>
+                  <button className=" border-2 mt-2 py-2 shadow-lg px-4 rounded-2xl border-blue-600" onClick={handleLogOut}>Logout</button>
                 ) : (
                   <div className="  text-xl text-gray-800">
                     <Link to="/login">Login</Link>
