@@ -31,7 +31,7 @@ const Offer = () => {
             <span className=" text-2xl py-2.5 px-2.5 md:text-3xl bg-blue-500 md:py-3 md:px-3 rounded-full text-white">
               <GoBook />
             </span>
-            <h3 className="  md:text-2xl font-Poppins font-bold">
+            <h3 className=" text-xl  md:text-2xl font-Poppins font-bold">
               Effective Course
             </h3>
           </div>
@@ -46,10 +46,10 @@ const Offer = () => {
           className="w-[410px] h-[180px]  hover:shadow-lg hover:scale-105 duration-1000 transition-all ease-in-out rounded-md p-6 cursor-pointer bg-gray-50 "
         >
           <div className="  flex lg:flex-col xl:flex-row items-center gap-3">
-            <span className=" text-3xl bg-blue-500 py-3 px-3 rounded-full text-white">
+            <span className=" text-2xl py-2.5 px-2.5 md:text-3xl bg-blue-500 md:py-3 md:px-3 rounded-full text-white">
               <PiCertificateBold />
             </span>
-            <h3 className=" text-2xl font-Poppins font-bold">
+            <h3 className=" text-xl md:text-2xl font-Poppins font-bold">
               Earn Certificate
             </h3>
           </div>

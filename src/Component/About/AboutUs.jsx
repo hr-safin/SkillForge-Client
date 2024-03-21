@@ -10,7 +10,7 @@ const AboutUs = () => {
           <h2
           data-aos="fade-up"
           data-aos-duration="1500"
-          className=" mb-5 rounded-full w-[200px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-lg ">
+          className=" mb-5 rounded-full  md:w-[200px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-base md:text-lg ">
             Get More About Us
           </h2>
           <h3
