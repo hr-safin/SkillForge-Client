@@ -29,7 +29,7 @@ export const Banner = () => {
            data-aos="fade-up"
            data-aos-duration="2500"
             to="/signUp"
-            className=" w-[157px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-500   text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all "
+            className=" w-[138px] md:w-[157px] flex items-center gap-1 font-medium px-3.5 py-2.5 md:px-4 md:py-3 bg-blue-500   text-white hover:bg-blue-700 text-sm md:text-base rounded-full hover:scale-105 duration-700 ease-in-out transition-all "
           >
             Register Now{" "}
             <span className="pt-1">

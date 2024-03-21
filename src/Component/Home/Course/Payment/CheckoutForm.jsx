@@ -88,7 +88,7 @@ const CheckoutForm = ({ total, enroll }) => {
             .then(res => {
               console.log(res.data)
               if(res.data.insertedId){
-                alert("added")
+                console.log("Payment Successful")
               }
             })
 
