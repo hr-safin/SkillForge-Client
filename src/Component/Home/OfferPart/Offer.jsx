@@ -4,7 +4,7 @@ import { GoBook } from "react-icons/go";
 import { PiCertificateBold } from "react-icons/pi";
 const Offer = () => {
   return (
-    <div className="md:px-6 lg:px-16 xl:px-32 px-6 md:pt-20 lg:pt-0 lg:pb-20 py-10 ">
+    <div className="md:px-6 lg:px-16 xl:px-32 px-6 md:pt-20 lg:pt-0 lg:pb-20 py-3 ">
       <div className=" gap-10 lg:gap-4 flex flex-row flex-wrap justify-center items-center ">
         <div
           data-aos="fade-up"
