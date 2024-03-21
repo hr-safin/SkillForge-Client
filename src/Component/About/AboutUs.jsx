@@ -10,7 +10,7 @@ const AboutUs = () => {
           <h2
           data-aos="fade-up"
           data-aos-duration="1500"
-          className=" mb-5 rounded-full  md:w-[200px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-base md:text-lg ">
+          className=" mb-5 rounded-full w-[190px]  md:w-[200px] py-2 px-4 bg-gray-50 text-blue-500 font-bold text-base md:text-lg ">
             Get More About Us
           </h2>
           <h3
@@ -35,13 +35,13 @@ const AboutUs = () => {
             on your journey to success.
           </p>
           <p data-aos="fade-up"
-          data-aos-duration="2000" className=" pt-6 flex items-center text-lg font-bold gap-3 pb-5"><span className=" text-xl py-1 px-1 shadow-md  rounded-full bg-blue-500 text-white"><FaAngleRight /></span> The Most World Class Instructors</p>
+          data-aos-duration="2000" className=" pt-6 flex items-center text-base md:text-lg font-bold gap-3 pb-5"><span className=" text-lg md:text-xl py-1 px-1 shadow-md  rounded-full bg-blue-500 text-white"><FaAngleRight /></span> The Most World Class Instructors</p>
           <p data-aos="fade-up"
-          data-aos-duration="2000" className=" flex items-center text-lg font-bold gap-3 pb-5"><span className=" text-xl py-1 px-1  rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Access Your Class anywhere</p>
+          data-aos-duration="2000" className=" flex items-center text-base md:text-lg font-bold gap-3 pb-5"><span className=" text-lg md:text-xl py-1 px-1  rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Access Your Class anywhere</p>
           <p data-aos="fade-up"
-          data-aos-duration="2000" className=" flex items-center text-lg font-bold gap-3 pb-3"><span className=" text-xl py-1 px-1 rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Flexible Course Plan</p>
+          data-aos-duration="2000" className=" flex items-center text-base md:text-lg font-bold gap-3 pb-3"><span className=" text-lg md:text-xl py-1 px-1 rounded-full shadow-md bg-blue-500 text-white"><FaAngleRight /></span> Flexible Course Plan</p>
           <Link data-aos="fade-up"
-          data-aos-duration="2000" to="/signUp" className=" mt-6 w-[166px] flex items-center gap-1 font-medium px-4 py-3 bg-blue-500  text-white hover:bg-blue-700 rounded-full hover:scale-105 duration-700 ease-in-out transition-all ">
+          data-aos-duration="2000" to="/signUp" className=" mt-6  w-[148px] md:w-[167px] flex items-center gap-1 font-medium px-3.5 py-2.5 md:px-4 md:py-3 bg-blue-500   text-white hover:bg-blue-700 text-sm md:text-base rounded-full hover:scale-105 duration-700 ease-in-out transition-all  ">
             Start Free Trial{" "}
             <span className="pt-1">
               <FaLongArrowAltRight />
