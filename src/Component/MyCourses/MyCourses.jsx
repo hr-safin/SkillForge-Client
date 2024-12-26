@@ -1,21 +1,48 @@
 import React, { useContext, useEffect, useState } from "react";
 import useEnrolledCourse from "../../Hook/useEnrolledCourse";
 import { ScaleLoader } from "react-spinners";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hook/useAxiosPublic"; // Assuming you have this hook for Axios.
 
 const MyCourses = () => {
   window.scrollTo(0, 0);
 
-  
-  const [enrolled, refetch] = useEnrolledCourse()
-  const [isLoading, setIsLoading] = useState(true)
+  const [enrolled, refetch] = useEnrolledCourse();
+  const [isLoading, setIsLoading] = useState(true);
+  const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    setIsLoading(true); // Start loading
+    setIsLoading(true);
     refetch().then(() => {
-      setIsLoading(false); // Stop loading when data is fetched
+      setIsLoading(false);
     });
   }, [refetch]);
-  
+
+  const handleUnenroll = (email) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Unenroll!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosPublic
+          .delete(`/enrolled/${email}`)
+          .then((response) => {
+            Swal.fire("Unenrolled!", "You have been unenrolled from the course.", "success");
+            refetch(); // Refetch the data after successful unenrollment.
+          })
+          .catch((error) => {
+            console.error(error);
+            Swal.fire("Error", "Failed to unenroll. Please try again.", "error");
+          });
+      }
+    });
+  };
+
   return (
     <>
       {isLoading ? (
@@ -34,9 +61,8 @@ const MyCourses = () => {
           {enrolled.map((enroll) => (
             <div
               key={enroll._id}
-              className="flex flex-col  lg:mt-4 mt-20 items-center bg-white border border-gray-100 rounded-lg shadow md:flex-row md:max-w-3xl"
+              className="flex flex-col lg:mt-4 mt-20 items-center bg-white border border-gray-100 rounded-lg shadow md:flex-row md:max-w-3xl"
             >
-              
               <img
                 className="object-fit w-full rounded-t-lg md:h-[238px] md:w-[350px] md:rounded-none md:rounded-s-lg"
                 src={enroll.courseImage}
@@ -52,9 +78,17 @@ const MyCourses = () => {
                 <p className="mb-3 font-normal text-gray-700">
                   Instructor: {enroll.courseInstructor}
                 </p>
-                <p className="mb-3 font-normal text-gray-700">
-                  Duration: {enroll.courseDuration}
-                </p>
+                <div className="flex justify-between items-center">
+                  <p className="mb-3 font-normal text-gray-700">
+                    Duration: {enroll.courseDuration}
+                  </p>
+                  <button
+                    onClick={() => handleUnenroll(enroll.email)}
+                    className="bg-blue-400 text-sm text-white rounded-full hover:bg-blue-600 px-3 py-1.5 mb-2"
+                  >
+                    Unenroll
+                  </button>
+                </div>
               </div>
             </div>
           ))}
