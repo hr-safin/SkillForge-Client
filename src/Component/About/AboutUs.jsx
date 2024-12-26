@@ -2,6 +2,7 @@ import React from "react";
 import { FaAngleRight,FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const AboutUs = () => {
+  window.scrollTo(0, 0);
   return (
     <div
     className="md:px-6 lg:px-16 xl:px-32 px-6 lg:py-0 py-20 ">

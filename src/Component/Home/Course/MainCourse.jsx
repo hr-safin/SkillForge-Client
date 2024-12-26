@@ -4,6 +4,7 @@ import useCourse from "../../../Hook/useCourse";
 import MainCourseCard from "./MainCourseCard";
 
 const MainCourse = () => {
+  window.scrollTo(0, 0);
   const [course] = useCourse();
 
   return (

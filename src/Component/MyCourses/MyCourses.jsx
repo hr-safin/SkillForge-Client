@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import useEnrolledCourse from "../../Hook/useEnrolledCourse";
 
 const MyCourses = () => {
-
+  window.scrollTo(0, 0);
 
 
   const [enrolled, refetch] = useEnrolledCourse()
